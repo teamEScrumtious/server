@@ -1,1 +1,0 @@
-SELECT Name FROM Recipe WHERE Name LIKE “%UserInput%” ORDER BY NAME
