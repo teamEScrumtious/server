@@ -7,7 +7,7 @@ FROM Recipe, Ingredient, RI, Note
 WHERE Note.recipeID = Recipe.ID AND RI.recipeID = Recipe.ID AND Ingredient.ID = RI.ingredientID;
 
 --get shopping list
-SELECT Ingredient.name, Ingredient.type, RI.unit, RI.quantity 
+SELECT  RI.quantity, RI.unit, Ingredient.name, Ingredient.type
 FROM Ingredient, RI, Recipe, Dish
 WHERE RI.recipeID = Recipe.ID AND RI.ingredientID = Ingredient.ID AND Dish.recipeID = Recipe.ID AND Dish.date >= (current_date + interval '7 days')
 ORDER BY Ingredient.type;
