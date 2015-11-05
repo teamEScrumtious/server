@@ -1,5 +1,5 @@
 --search
-SELECT name 
+SELECT name, ID 
 FROM Recipe 
 WHERE name LIKE “%UserInput%” 
 ORDER BY name
@@ -8,7 +8,7 @@ ORDER BY name
 SELECT Recipe.name, Recipe.prepInstructions, Note.content, Ingredient.name, RI.unit, RI.quantity 
 FROM Recipe, Ingredient, RI, Note 
 WHERE Note.recipeID = Recipe.ID AND RI.recipeID = Recipe.ID AND 
-  Ingredient.ID = RI.ingredientID AND Recipe.ID = 3 --Recipe will be determined by user after selection
+  Ingredient.ID = RI.ingredientID AND Recipe.ID = 3 --Recipe will be determined by user selection
 
 --get shopping list
 SELECT  RI.quantity, RI.unit, Ingredient.name, Ingredient.type
