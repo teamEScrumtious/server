@@ -1,3 +1,17 @@
+--get list of all recipes 
+SELECT name, ID
+FROM Recipe 
+
+--get list of recent recipes
+SELECT name, Recipe.ID
+FROM Recipe, Dish
+WHERE Dish.date  <= (current_date + interval '21 days') AND Dish.recipeID = Recipe.ID
+
+--get list of favorite recipes
+SELECT name, ID
+FROM Recipe
+WHERE bookmarked = true
+
 --search
 SELECT name, ID 
 FROM Recipe 
