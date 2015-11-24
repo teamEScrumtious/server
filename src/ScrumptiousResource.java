@@ -1,25 +1,21 @@
 package example;
-import com.sun.net.httpserver.HttpServer;
-import com.sun.jersey.api.container.httpserver.HttpServerFactory;
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import javax.ws.rs.*;
 
-import javax.ws.rs.*;
+import com.sun.jersey.api.container.httpserver.HttpServerFactory;
+import com.sun.net.httpserver.HttpServer;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.StringTokenizer;
 
 /**
- * Created by jlm54 on 11/18/2015.
+ * Created by njk28 on 11/23/2015.
  */
-// The Java class will be hosted at the URI path "/helloworld"
 @Path("/scrumptious")
 public class ScrumptiousResource {
 
@@ -132,9 +128,19 @@ public class ScrumptiousResource {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM Recipe WHERE id=" + id);
-            if (resultSet.next()) {
-                result = resultSet.getInt(1) + " " + resultSet.getString(2);
+            ResultSet resultSet = statement.executeQuery(
+                    "SELECT Recipe.name, Recipe.prepInstructions, Note.content, Recipe.bookmarked, Ingredient.name, Ingredient.type, RI.unit, RI.quantity \n" +
+                    "FROM Recipe, Ingredient, RI, Note \n" +
+                    "WHERE Note.recipeID = Recipe.ID AND RI.recipeID = Recipe.ID AND " +
+                    "Ingredient.ID = RI.ingredientID AND Recipe.ID =" + id
+                    );
+           if (resultSet.next()) {
+                result = resultSet.getString(1) + "\n" + resultSet.getString(2) + "\n" + resultSet.getString(3) + "\n" + resultSet.getBoolean(4) + "\n"
+                    + resultSet.getString(5) + "\n" + resultSet.getString(6) + "\n" + resultSet.getString(7) + "\n" + resultSet.getInt(8) + "\n";
+                while (resultSet.next()){
+                        result += resultSet.getString(5) + "\n" + resultSet.getString(6) + "\n" + resultSet.getString(7) + "\n" + resultSet.getInt(8) + "\n";
+                }
+                result += "\n";
             } else {
                 result = "nothing found...";
             }
@@ -185,7 +191,7 @@ public class ScrumptiousResource {
         server.start();
 
         System.out.println("Server running");
-        System.out.println("Visit: http://localhost:9998/helloworld");
+        System.out.println("Visit: http://localhost:9998/scrumptious");
         System.out.println("Hit return to stop...");
         System.in.read();
         System.out.println("Stopping server");
