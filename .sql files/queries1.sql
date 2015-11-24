@@ -28,5 +28,5 @@ WHERE Note.recipeID = Recipe.ID AND RI.recipeID = Recipe.ID AND
 SELECT  RI.quantity, RI.unit, Ingredient.name, Ingredient.type
 FROM Ingredient, RI, Recipe, Dish
 WHERE RI.recipeID = Recipe.ID AND RI.ingredientID = Ingredient.ID AND Dish.recipeID = Recipe.ID 
-  AND Dish.date >= (current_date + interval '7 days')
+  AND (Dish.date <= (current_date + interval '7 days')) AND (Dish.date >= (current_date))
 ORDER BY Ingredient.type;
