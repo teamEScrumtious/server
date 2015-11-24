@@ -78,7 +78,7 @@ public class ScrumptiousResource {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT Recipe.ID, name " +
                     "FROM Recipe, Dish " +
-                    "WHERE Dish.date  <= (current_date + interval '21 days') AND Dish.recipeID = Recipe.ID");
+                    "WHERE Dish.date  >= (current_date - interval '21 days') AND Dish.date < (current_date) AND Dish.recipeID = Recipe.ID");
             while (resultSet.next()) {
                 result += resultSet.getInt(1) + " " + resultSet.getString(2) + "\n";
             }
