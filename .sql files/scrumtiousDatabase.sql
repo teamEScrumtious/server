@@ -77,27 +77,28 @@ Insert Into Recipe Values (3, 'Antidote to Common Poisons', '1. Add 1 Bezoar to 
 
 
 Insert Into RI Values (1, 1, 1, 'tbsp', 3);
-Insert Into RI Values (2, 1, 2, NULL, 5);
+Insert Into RI Values (2, 1, 2, 'items', 5);
 Insert Into RI Values (3, 1, 3, 'cup', 1);
 Insert Into RI Values (4, 2, 4, 'measures', 3);
 Insert Into RI Values (5, 2, 5, 'bundles', 2);
 Insert Into RI Values (6, 2, 6, 'cups', 3);
-Insert Into RI Values (7, 2, 7, NULL, 4);
+Insert Into RI Values (7, 2, 7, 'items', 4);
 Insert Into RI Values (8, 2, 8, 'measures', 1);
 Insert Into RI Values (9, 2, 9, 'measures', 3);
 Insert Into RI Values (10, 2, 10, 'tsp', 1);
 Insert Into RI Values (11, 1, 10, 'tsp', 1);
-Insert Into RI Values (12, 3, 11, NULL, 1);
-Insert Into RI Values (13, 3, 12, NULL, 2);
+Insert Into RI Values (12, 3, 11, 'items', 1);
+Insert Into RI Values (13, 3, 12, 'items', 2);
 Insert Into RI Values (14, 3, 13, 'pinch', 1);
-Insert Into RI Values (15, 3, 14, 'measure', 2);
+Insert Into RI Values (15, 3, 14, 'measures', 2);
 
 
 Insert Into Note Values (1, 1, 'Add in a pinch of sugar and human hair to  get a real zing out of it. Also, wait until the moon is full');
 Insert Into Note Values(2,2,NULL);
 Insert Into Note Values(3,3,NULL);
 
-Insert Into Dish Values (1, 1, 4, '2015-10-31 23:59:59');
+Insert Into Dish Values (1, 1, 4, '2015-10-15 23:59:59');
 Insert Into Dish Values (2, 2, 3, '2015-11-10 23:00:00');
 Insert Into Dish Values (3, 3, 2, '2015-11-20 17:00:00');
+Insert Into Dish Values (4, 1, 8, '2015-11-27 11:45:00');
 
