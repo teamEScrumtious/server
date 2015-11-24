@@ -1,4 +1,4 @@
---
+﻿--
 -- This SQL Script will build a recipe book database.
 --
 --
@@ -99,4 +99,5 @@ Insert Into Note Values(3,3,NULL);
 
 Insert Into Dish Values (1, 1, 4, '2015-10-31 23:59:59');
 Insert Into Dish Values (2, 2, 3, '2015-11-10 23:00:00');
+Insert Into Dish Values (3, 3, 2, '2015-11-20 17:00:00');
 
