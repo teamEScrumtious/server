@@ -25,8 +25,8 @@ WHERE Note.recipeID = Recipe.ID AND RI.recipeID = Recipe.ID AND
   Ingredient.ID = RI.ingredientID AND Recipe.ID = 1 --Recipe will be determined by user selection
 
 --get shopping list
---SELECT  RI.quantity, RI.unit, Ingredient.name, Ingredient.type
---FROM Ingredient, RI, Recipe, Dish
---WHERE RI.recipeID = Recipe.ID AND RI.ingredientID = Ingredient.ID AND Dish.recipeID = Recipe.ID 
---  AND Dish.date >= (current_date + interval '7 days')
---ORDER BY Ingredient.type;
+SELECT  RI.quantity, RI.unit, Ingredient.name, Ingredient.type
+FROM Ingredient, RI, Recipe, Dish
+WHERE RI.recipeID = Recipe.ID AND RI.ingredientID = Ingredient.ID AND Dish.recipeID = Recipe.ID 
+  AND (Dish.date <= (current_date + interval '7 days')) AND (Dish.date >= (current_date))
+ORDER BY Ingredient.type;
