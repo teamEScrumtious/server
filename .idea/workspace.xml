@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d039c3c5-519b-4798-9640-6a10bfcbf978" name="Default" comment="">
+    <list default="true" id="d039c3c5-519b-4798-9640-6a10bfcbf978" name="Default" comment="Added another real recipe">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ScrumptiousServer.iws" />
@@ -463,7 +463,7 @@
       <workItem from="1448325052027" duration="4566000" />
       <workItem from="1448341170444" duration="144000" />
       <workItem from="1449107038971" duration="5751000" />
-      <workItem from="1449148812229" duration="1142000" />
+      <workItem from="1449148812229" duration="1225000" />
     </task>
     <task id="LOCAL-00001" summary="Added another real recipe">
       <created>1449151684606</created>
@@ -471,11 +471,17 @@
       <option name="project" value="LOCAL" />
       <updated>1449151684607</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added another real recipe">
+      <created>1449152109277</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1449152109277</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11603000" />
+    <option name="totallyTimeSpent" value="11686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1678" y="47" width="1400" height="820" extended-state="0" />
