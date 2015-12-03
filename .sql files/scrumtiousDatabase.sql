@@ -109,8 +109,17 @@ Insert Into RI Values (19, 4, 19, NULL, 5);
 Insert Into RI Values (20, 4, 20, NULL, 6);
 Insert Into Note Values(4,4, NULL);
 
+Insert Into Recipe Values (5, 'Lias Baked Oatmeal', '1. Preheat oven to 325^F 2. Mix all ingredients together. 3. Pour into 9in cake pan 4. Bake for 40 minutes. Can also be made ahead a few days and baked in the morning.', TRUE, 4);
+Insert Into RI Values (21, 5, 21, 'cup' , 2);
+Insert Into RI Values (22, 5, 22, 'cup', 0.5);
+Insert Into RI Values (23, 5, 23, 'tsp', 1);
+Insert Into RI Values (24, 5, 24, 'cup', 1);
+Insert Into RI Values (25, 5, 1, 'tsp', 1);
+Insert Into RI Values (26, 5, 25, NULL, 2);
+Insert Into Note Values(5,5, NULL);
 
 Insert Into Dish Values (1, 1, 4, '2015-10-31 23:59:59');
 Insert Into Dish Values (2, 2, 3, '2015-11-10 23:00:00');
 Insert Into Dish Values (3, 4, 4, '2015-12-06 18:00:00');
 Insert Into Dish Values (4, 4, 3, '2015-12-02 12:00:00');
+Insert Into Dish Values (5, 5, 4, '2015-12-06 08:00:00');
