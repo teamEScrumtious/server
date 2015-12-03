@@ -20,7 +20,7 @@ import java.sql.Statement;
 public class ScrumptiousResource {
 
     /**
-     * @return a simple hello-world string
+     * @return a simple hello-chef string
      */
     @SuppressWarnings("SameReturnValue")
     @GET
@@ -31,7 +31,7 @@ public class ScrumptiousResource {
     }
 
     /**
-     * Constants for a local Postgresql server with the monopoly database
+     * Constants for a local Postgresql server with the scrum-tious
      */
     private static final String DB_URI = "jdbc:postgresql://localhost:5432/scrum-tious"; //name of server in pgadmin
     private static final String DB_LOGIN_ID = "postgres";
@@ -116,6 +116,75 @@ public class ScrumptiousResource {
     }
 
     /**
+     * @return A list of all relevant data on dishes in the next 7 days
+     * Here is a Key for how it lays it out in the server
+     * Dish ID
+     * Dish Servings
+     * Dish Timestamp
+     * Recipe ID
+     * Recipe Name
+     * Recipe Servings
+     * Prep Instructions
+     * Note
+     * Recipe Bookmarked
+     *
+     * Ingredients are then listed as:
+     * Ingredient ID
+     * Ingredient name
+     * Ingredient type
+     * RI ID
+     * RI Unit
+     * RI Quantity
+     *
+     * After a recipe is finished there will be an extra \n
+     * then the next dish will begin in the same way.
+     */
+    @GET
+    @Path("/recipes/weekplan")
+    @Produces("text/plain")
+    public String getDishes() {
+        String result = "";
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(
+                    "SELECT  Dish.ID, Dish.servings, Dish.date, Recipe.ID, Recipe.name, Recipe.servings, Recipe.prepInstructions, Note.content,"
+                            +" Recipe.bookmarked, Ingredient.ID, Ingredient.name, Ingredient.type, RI.ID, RI.unit, RI.quantity \n"+
+                    "FROM Recipe, Dish, Ingredient, RI, Note\n" +
+                    "WHERE Note.recipeID = Recipe.ID AND RI.recipeID = Recipe.ID AND Dish.recipeID = Recipe.ID AND Ingredient.ID = RI.ingredientID AND\n"+
+                            "(Dish.date <= (current_date + interval '7 days')) AND (Dish.date >= (current_date))\n" +
+                    "ORDER BY Dish.date;"
+            );
+            while (resultSet.next()) {
+                int RecipeID = resultSet.getInt(1);
+                result += resultSet.getInt(1) + "\n" + resultSet.getInt(2) +"\n"+ resultSet.getTimestamp(3) + "\n" + resultSet.getInt(4) + "\n" + resultSet.getString(5)
+                        + "\n" + resultSet.getInt(6) + "\n" + resultSet.getString(7) + "\n" + resultSet.getString(8) + "\n" + resultSet.getBoolean(9)
+                        + "\n" + resultSet.getInt(10)+ "\n"+ resultSet.getString(11) + "\n" + resultSet.getString(12) + "\n" + resultSet.getInt(13) + "\n" + resultSet.getString(14) + "\n"
+                        + resultSet.getInt(15) + "\n";
+                while (resultSet.next()){
+                    if(resultSet.getInt(1) == RecipeID) {
+                        result += resultSet.getInt(10)+ "\n"+ resultSet.getString(11) + "\n" + resultSet.getString(12) + "\n" + resultSet.getInt(13) + "\n" + resultSet.getString(14) + "\n"
+                                + resultSet.getInt(15) + "\n";
+                }else {
+                        result += "\n" + resultSet.getInt(1) + "\n" + resultSet.getInt(2) +"\n"+ resultSet.getTimestamp(3) + "\n" + resultSet.getInt(4) + "\n" + resultSet.getString(5)
+                                + "\n" + resultSet.getInt(6) + "\n" + resultSet.getString(7) + "\n" + resultSet.getString(8) + "\n" + resultSet.getBoolean(9)
+                                + "\n" + resultSet.getInt(10)+ "\n"+ resultSet.getString(11) + "\n" + resultSet.getString(12) + "\n" + resultSet.getInt(13) + "\n" + resultSet.getString(14) + "\n"
+                                + resultSet.getInt(15) + "\n";
+                        break;
+                    }
+                }
+            }
+            resultSet.close();
+            statement.close();
+            connection.close();
+        } catch (Exception e) {
+            result = e.getMessage();
+        }
+        return result;
+    }
+
+    /**
      * @param id a recipe id in the scrum-tious database
      * @return a string version of the recipe record, if any, with the given id
      */
@@ -129,16 +198,17 @@ public class ScrumptiousResource {
             Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(
-                    "SELECT Recipe.name, Recipe.prepInstructions, Note.content, Recipe.bookmarked, Ingredient.name, Ingredient.type, RI.unit, RI.quantity \n" +
+                    "SELECT Recipe.ID, Recipe.name, Recipe.servings, Recipe.prepInstructions, Note.content, Recipe.bookmarked, Ingredient.name, Ingredient.type, RI.unit, RI.quantity \n" +
                     "FROM Recipe, Ingredient, RI, Note \n" +
                     "WHERE Note.recipeID = Recipe.ID AND RI.recipeID = Recipe.ID AND " +
                     "Ingredient.ID = RI.ingredientID AND Recipe.ID =" + id
                     );
            if (resultSet.next()) {
-                result = resultSet.getString(1) + "\n" + resultSet.getString(2) + "\n" + resultSet.getString(3) + "\n" + resultSet.getBoolean(4) + "\n"
-                    + resultSet.getString(5) + "\n" + resultSet.getString(6) + "\n" + resultSet.getString(7) + "\n" + resultSet.getInt(8) + "\n";
+                result = resultSet.getInt(1)+ "\n" + resultSet.getString(2) + "\n" + resultSet.getInt(3) + "\n" + resultSet.getString(4) + "\n" + resultSet.getString(5)
+                    + "\n" + resultSet.getBoolean(6) + "\n" + resultSet.getString(7) + "\n" + resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n"
+                    + resultSet.getInt(10) + "\n";
                 while (resultSet.next()){
-                        result += resultSet.getString(5) + "\n" + resultSet.getString(6) + "\n" + resultSet.getString(7) + "\n" + resultSet.getInt(8) + "\n";
+                        result += resultSet.getString(7) + "\n" + resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n" + resultSet.getInt(10) + "\n";
                 }
                 result += "\n";
             } else {
@@ -165,7 +235,8 @@ public class ScrumptiousResource {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT  RI.quantity, RI.unit, Ingredient.name, Ingredient.type\n" +
+            ResultSet resultSet = statement.executeQuery(
+                    "SELECT  RI.quantity, RI.unit, Ingredient.name, Ingredient.type\n" +
                     "FROM Ingredient, RI, Recipe, Dish\n" +
                     "WHERE RI.recipeID = Recipe.ID AND RI.ingredientID = Ingredient.ID AND Dish.recipeID = Recipe.ID \n" +
                     "  AND (Dish.date <= (current_date + interval '7 days')) AND (Dish.date >= (current_date))\n" +

@@ -71,6 +71,11 @@ Insert Into Ingredient Values (12, 'Mistletoe Berries', 'Spices');
 Insert Into Ingredient Values (13, 'Unicorn Horn', 'Spices');
 Insert Into Ingredient Values (14, 'Standard Ingredient', 'Spices');
 Insert Into Ingredient Values (15, 'Chicken', 'Meats');
+Insert Into Ingredient Values (16, 'Ground Beef', 'Meats');
+Insert Into Ingredient Values (17, 'Taco Seasoning', 'Spices');
+Insert Into Ingredient Values (18, 'Lettuce', 'Produce');
+Insert Into Ingredient Values (19, 'Cheese', 'Dairy');
+Insert Into Ingredient Values (20, 'Tortilla', 'International');
 
 Insert Into Recipe Values (1, 'Immortality', 'Throw it into a pot add some black magic and boom... Literally', TRUE, 2);
 Insert Into RI Values (1, 1, 1, 'tbsp', 3);
@@ -96,5 +101,16 @@ Insert Into RI Values (14, 3, 13, 'pinch', 1);
 Insert Into RI Values (15, 3, 14, 'measure', 2);
 Insert Into Note Values(3,3,NULL);
 
+Insert Into Recipe Values (4, 'Nathans Tacos', '1. Brown the Beef. 2. Pour a the water and the taco seasoning into the pan with the beef and cook until water mostly boils off. 3. Warm other ingredients to desired temperature. 4. Mix as desired. 5. Enjoy.', TRUE, 5);
+Insert Into RI Values (16, 4, 16, 'lb' , 1/2);
+Insert Into RI Values (17, 4, 17, 'tbsp', 1);
+Insert Into RI Values (18, 4, 18, 'cup', 1);
+Insert Into RI Values (19, 4, 19, NULL, 5);
+Insert Into RI Values (20, 4, 20, NULL, 6);
+Insert Into Note Values(4,4, NULL);
+
+
 Insert Into Dish Values (1, 1, 4, '2015-10-31 23:59:59');
 Insert Into Dish Values (2, 2, 3, '2015-11-10 23:00:00');
+Insert Into Dish Values (3, 4, 4, '2015-12-06 18:00:00');
+Insert Into Dish Values (4, 4, 3, '2015-12-02 12:00:00');
