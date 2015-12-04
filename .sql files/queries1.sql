@@ -30,3 +30,10 @@ FROM Ingredient, RI, Recipe, Dish
 WHERE RI.recipeID = Recipe.ID AND RI.ingredientID = Ingredient.ID AND Dish.recipeID = Recipe.ID 
   AND (Dish.date <= (current_date + interval '7 days')) AND (Dish.date >= (current_date))
 ORDER BY Ingredient.type;
+
+--get week plan
+SELECT  Dish.ID, Dish.servings, Dish.date, Recipe.ID, Recipe.name, Recipe.servings, Recipe.prepInstructions, Note.content, Recipe.bookmarked, Ingredient.ID, Ingredient.name, Ingredient.type, RI.ID, RI.unit, RI.quantity \n"+
+FROM Recipe, Dish, Ingredient, RI, Note
+WHERE Note.recipeID = Recipe.ID AND RI.recipeID = Recipe.ID AND Dish.recipeID = Recipe.ID AND 
+  Ingredient.ID = RI.ingredientID AND(Dish.date <= (current_date + interval '7 days')) AND (Dish.date >= (current_date))
+ORDER BY Dish.date;
