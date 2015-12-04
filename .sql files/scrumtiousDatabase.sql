@@ -71,6 +71,17 @@ Insert Into Ingredient Values (12, 'Mistletoe Berries', 'Spices');
 Insert Into Ingredient Values (13, 'Unicorn Horn', 'Spices');
 Insert Into Ingredient Values (14, 'Standard Ingredient', 'Spices');
 Insert Into Ingredient Values (15, 'Chicken', 'Meats');
+Insert Into Ingredient Values (16, 'Ground Beef', 'Meats');
+Insert Into Ingredient Values (17, 'Taco Seasoning', 'Spices');
+Insert Into Ingredient Values (18, 'Lettuce', 'Produce');
+Insert Into Ingredient Values (19, 'Cheese', 'Dairy');
+Insert Into Ingredient Values (20, 'Tortilla', 'International');
+Insert Into Ingredient Values (21, 'Oats', 'Baking');
+Insert Into Ingredient Values (22, 'Butter', 'Dairy');
+Insert Into Ingredient Values (23, 'Baking Soda', 'Baking');
+Insert Into Ingredient Values (24, 'Milk', 'Dairy');
+Insert Into Ingredient Values (25, 'Eggs', 'Dairy');
+
 
 Insert Into Recipe Values (1, 'Immortality', 'Throw it into a pot add some black magic and boom... Literally', TRUE, 2);
 Insert Into RI Values (1, 1, 1, 'tbsp', 3);
@@ -82,7 +93,7 @@ Insert Into Note Values (1, 1, 'Add in a pinch of sugar and human hair to  get a
 Insert Into Recipe Values (2, 'Polyjuice Potion', '1. Add the fluxweed to the cauldron 2. Add the knto grass 3. Stir 3 times clockwise 4. Wave your wand then let the potion brew for 80 minutes 5. Add the leeches, 6. Crush two cups of lacewing flies in a mortar then add, 7. Heat for 30 seconds on low heat',FALSE, 3);
 Insert Into RI Values (4, 2, 4, 'measures', 3);
 Insert Into RI Values (5, 2, 5, 'bundles', 2);
-Insert Into RI Values (6, 2, 6, 'cups', 3);
+Insert Into RI Values (6, 2, 6, 'cup', 3);
 Insert Into RI Values (7, 2, 7, NULL, 4);
 Insert Into RI Values (8, 2, 8, 'measures', 1);
 Insert Into RI Values (9, 2, 9, 'measures', 3);
@@ -96,5 +107,26 @@ Insert Into RI Values (14, 3, 13, 'pinch', 1);
 Insert Into RI Values (15, 3, 14, 'measure', 2);
 Insert Into Note Values(3,3,NULL);
 
+Insert Into Recipe Values (4, 'Nathans Tacos', '1. Brown the Beef. 2. Pour a the water and the taco seasoning into the pan with the beef and cook until water mostly boils off. 3. Warm other ingredients to desired temperature. 4. Mix as desired. 5. Enjoy.', TRUE, 5);
+Insert Into RI Values (16, 4, 16, 'lb' , 0.5);
+Insert Into RI Values (17, 4, 17, 'tbsp', 1);
+Insert Into RI Values (18, 4, 18, 'cup', 1);
+Insert Into RI Values (19, 4, 19, NULL, 5);
+Insert Into RI Values (20, 4, 20, NULL, 6);
+Insert Into Note Values(4,4, NULL);
+
+Insert Into Recipe Values (5, 'Lias Baked Oatmeal', '1. Preheat oven to 325^F 2. Mix all ingredients together. 3. Pour into 9in cake pan 4. Bake for 40 minutes. Can also be made ahead a few days and baked in the morning.', TRUE, 4);
+Insert Into RI Values (21, 5, 21, 'cup' , 2);
+Insert Into RI Values (22, 5, 22, 'cup', 0.5);
+Insert Into RI Values (23, 5, 23, 'tsp', 1);
+Insert Into RI Values (24, 5, 24, 'cup', 1);
+Insert Into RI Values (25, 5, 1, 'tsp', 1);
+Insert Into RI Values (26, 5, 25, NULL, 2);
+Insert Into Note Values(5,5, NULL);
+
+
 Insert Into Dish Values (1, 1, 4, '2015-10-31 23:59:59');
 Insert Into Dish Values (2, 2, 3, '2015-11-10 23:00:00');
+Insert Into Dish Values (3, 4, 4, '2015-12-06 18:00:00');
+Insert Into Dish Values (4, 4, 3, '2015-12-02 12:00:00');
+Insert Into Dish Values (5, 5, 4, '2015-12-06 08:00:00');
