@@ -132,7 +132,7 @@ Insert Into RI Values (27, 6, 27, 'cup' , 2);
 Insert Into RI Values (28, 6, 34, 'tbsp', 1);
 Insert Into RI Values (29, 6, 26, 'cup', 3);
 Insert Into RI Values (30, 6, 35, 'tbsp', 3);
-Insert Into Note Values(6,6, NULL);
+Insert Into Note Values(6,6, 'Make sure water is warm, but not hot so it does not kill the yeast.');
 
 Insert Into Recipe Values (7, 'Pie Crust', '1. Mix flour and salt. \n2. Cut cold butter into mixture with pastry cutter. \n3. Add 2-3 tablespoons cold water until dough holds together. Do not let it get too sticky.', TRUE, 8);
 Insert Into RI Values (33, 7, 22, 'cup' , .5);
