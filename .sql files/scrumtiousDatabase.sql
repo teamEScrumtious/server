@@ -56,31 +56,39 @@ Grant Select On Dish To Public;
 
 
 -- Inserts Data
-Insert Into Ingredient Values (1, 'Salt', 'Spices');
-Insert Into Ingredient Values (2, 'Human Souls', 'Spices');
-Insert Into Ingredient Values (3, 'Eye of Newt', 'Meats');
-Insert Into Ingredient Values (4, 'Fluxweed', 'Spices');
+Insert Into Ingredient Values (1, 'Salt', 'Spice');
+Insert Into Ingredient Values (2, 'Human Souls', 'Spice');
+Insert Into Ingredient Values (3, 'Eye of Newt', 'Meat');
+Insert Into Ingredient Values (4, 'Fluxweed', 'Spice');
 Insert Into Ingredient Values (5, 'Knotgrass', 'Produce');
-Insert Into Ingredient Values (6, 'Lacewing Flies', 'Meats');
-Insert Into Ingredient Values (7, 'Leeches', 'Meats');
+Insert Into Ingredient Values (6, 'Lacewing Flies', 'Meat');
+Insert Into Ingredient Values (7, 'Leeches', 'Meat');
 Insert Into Ingredient Values (8, 'Horn of Bicorn', 'Dairy');
-Insert Into Ingredient Values (9, 'Boomslang Skin', 'Meats');
-Insert Into Ingredient Values (10, 'Human Hair', 'Spices');
-Insert Into Ingredient Values (11, 'Bezoar', 'Spices');
-Insert Into Ingredient Values (12, 'Mistletoe Berries', 'Spices');
-Insert Into Ingredient Values (13, 'Unicorn Horn', 'Spices');
-Insert Into Ingredient Values (14, 'Standard Ingredient', 'Spices');
-Insert Into Ingredient Values (15, 'Chicken', 'Meats');
-Insert Into Ingredient Values (16, 'Ground Beef', 'Meats');
-Insert Into Ingredient Values (17, 'Taco Seasoning', 'Spices');
+Insert Into Ingredient Values (9, 'Boomslang Skin', 'Meat');
+Insert Into Ingredient Values (10, 'Human Hair', 'Spice');
+Insert Into Ingredient Values (11, 'Bezoar', 'Spice');
+Insert Into Ingredient Values (12, 'Mistletoe Berries', 'Spice');
+Insert Into Ingredient Values (13, 'Unicorn Horn', 'Spice');
+Insert Into Ingredient Values (14, 'Standard Ingredient', 'Spice');
+Insert Into Ingredient Values (15, 'Chicken', 'Meat');
+Insert Into Ingredient Values (16, 'Ground Beef', 'Meat');
+Insert Into Ingredient Values (17, 'Taco Seasoning', 'Spice');
 Insert Into Ingredient Values (18, 'Lettuce', 'Produce');
 Insert Into Ingredient Values (19, 'Cheese', 'Dairy');
-Insert Into Ingredient Values (20, 'Tortilla', 'International');
+Insert Into Ingredient Values (20, 'Tortilla', 'Bread');
 Insert Into Ingredient Values (21, 'Oats', 'Baking');
 Insert Into Ingredient Values (22, 'Butter', 'Dairy');
 Insert Into Ingredient Values (23, 'Baking Soda', 'Baking');
 Insert Into Ingredient Values (24, 'Milk', 'Dairy');
 Insert Into Ingredient Values (25, 'Eggs', 'Dairy');
+Insert Into Ingredient Values (28, 'Split Green Peas', 'Produce')
+Insert Into Ingredient Values (29, 'Leeks', 'Produce')
+Insert Into Ingredient Values (30, 'Onions', 'Produce')
+Insert Into Ingredient Values (31, 'Carrots', 'Produce')
+Insert Into Ingredient Values (32, 'Potatoes', 'Produce')
+Insert Into Ingredient Values (33, 'Spare ribs', 'Meat')
+Insert Into Ingredient Values (36, 'Bacon', 'Meat')
+Insert Into Ingredient Values (37, 'Celeriac', 'Produce')
 
 
 Insert Into Recipe Values (1, 'Immortality', 'Throw it into a pot add some black magic and boom... Literally', TRUE, 2);
@@ -124,6 +132,17 @@ Insert Into RI Values (25, 5, 1, 'tsp', 1);
 Insert Into RI Values (26, 5, 25, NULL, 2);
 Insert Into Note Values(5,5, NULL);
 
+Insert Into Recipe Values (8, 'Pea Soup', '1. Add split green peas, spareribs, bacon and water and simmer for approximatle 1.5 hours. 2. Add chopped leeks, celeriac, onion, carrots and potato and cook for another hour until the soup becomes thick. 3. Take the meat out and remove bones. 4. Puree the soup and add the meat back in', FALSE, 8);
+Insert Into RI Values (37, 8, 28, 'cup' , 3.5);
+Insert Into RI Values (38, 8, 33, 'lb', 1);
+Insert Into RI Values (39, 8, 36, 'lb', .5);
+Insert Into RI Values (40, 8, 27, 'cup', 13);
+Insert Into RI Values (41, 8, 29, NULL, 2);
+Insert Into RI Values (42, 8, 37, NULL, 1);
+Insert Into RI Values (43, 8, 30, NULL, 1);
+Insert Into RI Values (44, 8, 31, NULL, 1);
+Insert Into RI Values (45, 8, 32, NULL, 1);
+Insert Into Note Values(8, 8, NULL);
 
 Insert Into Dish Values (1, 1, 4, '2015-10-31 23:59:59');
 Insert Into Dish Values (2, 2, 3, '2015-11-10 23:00:00');
