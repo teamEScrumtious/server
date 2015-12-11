@@ -81,7 +81,10 @@ Insert Into Ingredient Values (22, 'Butter', 'Dairy');
 Insert Into Ingredient Values (23, 'Baking Soda', 'Baking');
 Insert Into Ingredient Values (24, 'Milk', 'Dairy');
 Insert Into Ingredient Values (25, 'Eggs', 'Dairy');
-
+Insert Into Ingredient Values (26, 'Flour', 'Baking');
+Insert Into Ingredient Values (27, 'Water', 'Baking');
+Insert Into Ingredient Values (34, 'Yeast', 'Baking');
+Insert Into Ingredient Values (35, 'Olive Oil', 'Baking');
 
 Insert Into Recipe Values (1, 'Immortality', 'Throw it into a pot add some black magic and boom... Literally', TRUE, 2);
 Insert Into RI Values (1, 1, 1, 'tbsp', 3);
@@ -91,12 +94,12 @@ Insert Into RI Values (11, 1, 10, 'tsp', 1);
 Insert Into Note Values (1, 1, 'Add in a pinch of sugar and human hair to  get a real zing out of it. Also, wait until the moon is full');
 
 Insert Into Recipe Values (2, 'Polyjuice Potion', '1. Add the fluxweed to the cauldron 2. Add the knto grass 3. Stir 3 times clockwise 4. Wave your wand then let the potion brew for 80 minutes 5. Add the leeches, 6. Crush two cups of lacewing flies in a mortar then add, 7. Heat for 30 seconds on low heat',FALSE, 3);
-Insert Into RI Values (4, 2, 4, 'measures', 3);
+Insert Into RI Values (4, 2, 4, 'measure', 3);
 Insert Into RI Values (5, 2, 5, 'bundles', 2);
 Insert Into RI Values (6, 2, 6, 'cup', 3);
 Insert Into RI Values (7, 2, 7, NULL, 4);
-Insert Into RI Values (8, 2, 8, 'measures', 1);
-Insert Into RI Values (9, 2, 9, 'measures', 3);
+Insert Into RI Values (8, 2, 8, 'measure', 1);
+Insert Into RI Values (9, 2, 9, 'measure', 3);
 Insert Into RI Values (10, 2, 10, 'tsp', 1);
 Insert Into Note Values(2,2,NULL);
 
@@ -107,7 +110,7 @@ Insert Into RI Values (14, 3, 13, 'pinch', 1);
 Insert Into RI Values (15, 3, 14, 'measure', 2);
 Insert Into Note Values(3,3,NULL);
 
-Insert Into Recipe Values (4, 'Nathans Tacos', '1. Brown the Beef. 2. Pour a the water and the taco seasoning into the pan with the beef and cook until water mostly boils off. 3. Warm other ingredients to desired temperature. 4. Mix as desired. 5. Enjoy.', TRUE, 5);
+Insert Into Recipe Values (4, 'Nathans Tacos', '1. Brown the Beef. \n2. Pour a the water and the taco seasoning into the pan with the beef and cook until water mostly boils off. \n3. Warm other ingredients to desired temperature. \n4. Mix as desired. \n5. Enjoy.', TRUE, 5);
 Insert Into RI Values (16, 4, 16, 'lb' , 0.5);
 Insert Into RI Values (17, 4, 17, 'tbsp', 1);
 Insert Into RI Values (18, 4, 18, 'cup', 1);
@@ -115,7 +118,7 @@ Insert Into RI Values (19, 4, 19, NULL, 5);
 Insert Into RI Values (20, 4, 20, NULL, 6);
 Insert Into Note Values(4,4, NULL);
 
-Insert Into Recipe Values (5, 'Lias Baked Oatmeal', '1. Preheat oven to 325^F 2. Mix all ingredients together. 3. Pour into 9in cake pan 4. Bake for 40 minutes. Can also be made ahead a few days and baked in the morning.', TRUE, 4);
+Insert Into Recipe Values (5, 'Baked Oatmeal', '1. Preheat oven to 325^F \n2. Mix all ingredients together. \n3. Pour into 9in cake pan \n4. Bake for 40 minutes. Can also be made ahead a few days and baked in the morning.', TRUE, 4);
 Insert Into RI Values (21, 5, 21, 'cup' , 2);
 Insert Into RI Values (22, 5, 22, 'cup', 0.5);
 Insert Into RI Values (23, 5, 23, 'tsp', 1);
@@ -124,6 +127,19 @@ Insert Into RI Values (25, 5, 1, 'tsp', 1);
 Insert Into RI Values (26, 5, 25, NULL, 2);
 Insert Into Note Values(5,5, NULL);
 
+Insert Into Recipe Values (6, 'Pizza Dough', '1. Mix yeast and warm water. \n2. add 1.5 cups flour. \n3. Add oil and 1-1.5 cups more flour. \n4. knead until smooth and elastic. \n5. Let rise until doubled. \n6. Punch and shape into pizza crust or pretzels!', TRUE, 4);
+Insert Into RI Values (27, 6, 27, 'cup' , 2);
+Insert Into RI Values (28, 6, 34, 'tbsp', 1);
+Insert Into RI Values (29, 6, 26, 'cup', 3);
+Insert Into RI Values (30, 6, 35, 'tbsp', 3);
+Insert Into Note Values(6,6, 'Make sure water is warm, but not hot so it does not kill the yeast.');
+
+Insert Into Recipe Values (7, 'Pie Crust', '1. Mix flour and salt. \n2. Cut cold butter into mixture with pastry cutter. \n3. Add 2-3 tablespoons cold water until dough holds together. Do not let it get too sticky.', TRUE, 8);
+Insert Into RI Values (33, 7, 22, 'cup' , .5);
+Insert Into RI Values (34, 7, 26, 'cup', 1.5);
+Insert Into RI Values (35, 7, 1, 'tsp', 1);
+Insert Into RI Values (36, 7, 27, 'tbsp', 3);
+Insert Into Note Values(7,7, NULL);
 
 Insert Into Dish Values (1, 1, 4, '2015-10-31 23:59:59');
 Insert Into Dish Values (2, 2, 3, '2015-11-10 23:00:00');
