@@ -136,7 +136,7 @@ public class ScrumptiousResource {
      * RI Unit
      * RI Quantity
      *
-     * After a recipe is finished there will be an extra \n
+     * After a recipe is finished there will be a '&' on a new line
      * then the next dish will begin in the same way.
      */
     @GET
@@ -167,7 +167,7 @@ public class ScrumptiousResource {
                         result += resultSet.getInt(10)+ "\n"+ resultSet.getString(11) + "\n" + resultSet.getString(12) + "\n" + resultSet.getInt(13) + "\n" + resultSet.getString(14) + "\n"
                                 + resultSet.getInt(15) + "\n";
                 }else {
-                        result += "\n" + resultSet.getInt(1) + "\n" + resultSet.getInt(2) +"\n"+ resultSet.getTimestamp(3) + "\n" + resultSet.getInt(4) + "\n" + resultSet.getString(5)
+                        result += "& \n" + resultSet.getInt(1) + "\n" + resultSet.getInt(2) +"\n"+ resultSet.getTimestamp(3) + "\n" + resultSet.getInt(4) + "\n" + resultSet.getString(5)
                                 + "\n" + resultSet.getInt(6) + "\n" + resultSet.getString(7) + "\n" + resultSet.getString(8) + "\n" + resultSet.getBoolean(9)
                                 + "\n" + resultSet.getInt(10)+ "\n"+ resultSet.getString(11) + "\n" + resultSet.getString(12) + "\n" + resultSet.getInt(13) + "\n" + resultSet.getString(14) + "\n"
                                 + resultSet.getInt(15) + "\n";
@@ -208,9 +208,10 @@ public class ScrumptiousResource {
                     + "\n" + resultSet.getBoolean(6) + "\n" + resultSet.getString(7) + "\n" + resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n"
                     + resultSet.getInt(10) + "\n";
                 while (resultSet.next()){
-                        result += resultSet.getString(7) + "\n" + resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n" + resultSet.getInt(10) + "\n";
+                        result += resultSet.getString(7) + "\n" + resultSet.getString(8) + "\n"
+                                + resultSet.getString(9) + "\n" + resultSet.getInt(10) + "\n";
                 }
-                result += "\n";
+                result += "& \n";
             } else {
                 result = "nothing found...";
             }
