@@ -57,6 +57,28 @@ public class ScrumptiousResource {
         return result;
     }
 
+    @GET
+    @Path("/recipes/alpha")
+    @Produces("text/plain")
+    public String getRecipesAlpha() {
+        String result = "";
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT ID, name, prepInstructions, servings FROM RECIPE");
+            while (resultSet.next()) {
+                result += resultSet.getInt(1) + "\n" + resultSet.getString(2) + "\n" + resultSet.getString(3) + "\n" + resultSet.getString(4) + "\n";
+            }
+            resultSet.close();
+            statement.close();
+            connection.close();
+        } catch (Exception e) {
+            result = e.getMessage();
+        }
+        return result;
+    }
+
 
     /**
      * @return a string version of the recent recipe records
