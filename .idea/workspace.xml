@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d039c3c5-519b-4798-9640-6a10bfcbf978" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ScrumptiousResource.java" afterPath="$PROJECT_DIR$/src/ScrumptiousResource.java" />
-    </list>
+    <list default="true" id="d039c3c5-519b-4798-9640-6a10bfcbf978" name="Default" comment="" />
     <ignored path="ScrumptiousServer.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,7 +26,7 @@
       <file leaf-file-name="ScrumptiousResource.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ScrumptiousResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.914787">
+            <state vertical-scroll-proportion="-0.9598997">
               <caret line="353" column="6" selection-start-line="353" selection-start-column="6" selection-end-line="353" selection-end-column="6" />
               <folding>
                 <marker date="1450051791500" expanded="true" signature="1385:1405" placeholder="SELECT * FRO..RECIPE..." />
@@ -654,7 +652,7 @@
       <workItem from="1449148812229" duration="2792000" />
       <workItem from="1449251175935" duration="2139000" />
       <workItem from="1450028324929" duration="641000" />
-      <workItem from="1450029159544" duration="5248000" />
+      <workItem from="1450029159544" duration="5299000" />
     </task>
     <task id="LOCAL-00001" summary="Added another real recipe">
       <created>1449151684606</created>
@@ -696,10 +694,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21281000" />
+    <option name="totallyTimeSpent" value="21332000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -961,7 +959,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ScrumptiousResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.914787">
+        <state vertical-scroll-proportion="-0.9598997">
           <caret line="353" column="6" selection-start-line="353" selection-start-column="6" selection-end-line="353" selection-end-column="6" />
           <folding>
             <marker date="1450051791500" expanded="true" signature="1385:1405" placeholder="SELECT * FRO..RECIPE..." />
