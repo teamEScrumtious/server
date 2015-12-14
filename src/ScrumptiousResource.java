@@ -35,30 +35,7 @@ public class ScrumptiousResource {
     private static final String DB_LOGIN_ID = "postgres";
     private static final String DB_PASSWORD = "postgres";
 
-    @GET
-    @Path("/recipes")
-    @Produces("text/plain")
-    public String getRecipes() {
-        String result = "";
-        try {
-            Class.forName("org.postgresql.Driver");
-            Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM RECIPE");
-            while (resultSet.next()) {
-                result += resultSet.getInt(1) + " " + resultSet.getString(2) + "\n";
-            }
-            resultSet.close();
-            statement.close();
-            connection.close();
-        } catch (Exception e) {
-            result = e.getMessage();
-        }
-        return result;
-    }
-
-
-    /**
+     /**
      * @return a string version of the recent recipe records
      */
     @GET
@@ -70,11 +47,30 @@ public class ScrumptiousResource {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT Recipe.ID, name " +
-                    "FROM Recipe, Dish " +
-                    "WHERE Dish.date  >= (current_date - interval '21 days') AND Dish.date < (current_date) AND Dish.recipeID = Recipe.ID");
+            ResultSet resultSet = statement.executeQuery(
+                    "SELECT  Recipe.ID, Recipe.name, Recipe.servings, Recipe.prepInstructions, Note.content,"+
+                    " Recipe.bookmarked, Ingredient.ID, Ingredient.name, Ingredient.type, RI.ID, RI.unit, RI.quantity \n"+
+                    "FROM Recipe, Dish, Ingredient, RI, Note\n" +
+                    "WHERE Note.recipeID = Recipe.ID AND RI.recipeID = Recipe.ID AND Dish.recipeID = Recipe.ID AND Ingredient.ID = RI.ingredientID "+
+                    "Dish.date  >= (current_date - interval '21 days') AND Dish.date < (current_date) AND Dish.recipeID = Recipe.ID");
             while (resultSet.next()) {
-                result += resultSet.getInt(1) + " " + resultSet.getString(2) + "\n";
+                int RecipeID = resultSet.getInt(1);
+                result += resultSet.getInt(1) + "\n" + resultSet.getString(2) + "\n" + resultSet.getInt(3) + "\n" + resultSet.getString(4)
+                        + "\n" + resultSet.getString(5) + "\n" + resultSet.getBoolean(6) + "\n" + resultSet.getInt(7)+ "\n"
+                        + resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n" + resultSet.getInt(10) + "\n"
+                        + resultSet.getString(11) + "\n" + resultSet.getInt(12) + "\n";
+                while (resultSet.next()){
+                    if(resultSet.getInt(1) == RecipeID) {
+                        result += resultSet.getInt(7)+ "\n"+ resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n" + resultSet.getInt(10) +
+                                "\n" + resultSet.getString(11) + "\n" + resultSet.getInt(12) + "\n";
+                    }else {
+                        result += "& \n" + resultSet.getInt(1) + "\n" + resultSet.getString(2) + "\n" + resultSet.getInt(3) + "\n" + resultSet.getString(4)
+                                + "\n" + resultSet.getString(5) + "\n" + resultSet.getBoolean(6) + "\n" + resultSet.getInt(7)+ "\n"
+                                + resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n" + resultSet.getInt(10) + "\n"
+                                + resultSet.getString(11) + "\n" + resultSet.getInt(12) + "\n";
+                        break;
+                    }
+                }
             }
             resultSet.close();
             statement.close();
@@ -97,13 +93,32 @@ public class ScrumptiousResource {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT ID, name\n" +
-                    "FROM Recipe\n" +
-                    "WHERE bookmarked = true");
+            ResultSet resultSet = statement.executeQuery(
+                    "SELECT  Recipe.ID, Recipe.name, Recipe.servings, Recipe.prepInstructions, Note.content,"
+                            +" Recipe.bookmarked, Ingredient.ID, Ingredient.name, Ingredient.type, RI.ID, RI.unit, RI.quantity \n"+
+                            "FROM Recipe, Dish, Ingredient, RI, Note\n" +
+                            "WHERE Note.recipeID = Recipe.ID AND RI.recipeID = Recipe.ID AND Dish.recipeID = Recipe.ID AND Ingredient.ID = RI.ingredientID "+
+                            "AND Recipe.bookmarked = TRUE"
+            );
             while (resultSet.next()) {
-                result += resultSet.getInt(1) + " " + resultSet.getString(2) + "\n";
+                int RecipeID = resultSet.getInt(1);
+                result += resultSet.getInt(1) + "\n" + resultSet.getString(2) + "\n" + resultSet.getInt(3) + "\n" + resultSet.getString(4)
+                        + "\n" + resultSet.getString(5) + "\n" + resultSet.getBoolean(6) + "\n" + resultSet.getInt(7)+ "\n"
+                        + resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n" + resultSet.getInt(10) + "\n"
+                        + resultSet.getString(11) + "\n" + resultSet.getInt(12) + "\n";
+                while (resultSet.next()){
+                    if(resultSet.getInt(1) == RecipeID) {
+                        result += resultSet.getInt(7)+ "\n"+ resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n" + resultSet.getInt(10) +
+                                "\n" + resultSet.getString(11) + "\n" + resultSet.getInt(12) + "\n";
+                    }else {
+                        result += "& \n" + resultSet.getInt(1) + "\n" + resultSet.getString(2) + "\n" + resultSet.getInt(3) + "\n" + resultSet.getString(4)
+                                + "\n" + resultSet.getString(5) + "\n" + resultSet.getBoolean(6) + "\n" + resultSet.getInt(7)+ "\n"
+                                + resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n" + resultSet.getInt(10) + "\n"
+                                + resultSet.getString(11) + "\n" + resultSet.getInt(12) + "\n";
+                        break;
+                    }
+                }
             }
-
             resultSet.close();
             statement.close();
             connection.close();
@@ -196,18 +211,18 @@ public class ScrumptiousResource {
             Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(
-                    "SELECT Recipe.ID, Recipe.name, Recipe.servings, Recipe.prepInstructions, Note.content, Recipe.bookmarked, Ingredient.name, Ingredient.type, RI.unit, RI.quantity \n" +
+                    "SELECT Recipe.ID, Recipe.name, Recipe.servings, Recipe.prepInstructions, Note.content, Recipe.bookmarked, Ingredient.ID, Ingredient.name, Ingredient.type, RI.ID, RI.unit, RI.quantity \n" +
                     "FROM Recipe, Ingredient, RI, Note \n" +
                     "WHERE Note.recipeID = Recipe.ID AND RI.recipeID = Recipe.ID AND " +
                     "Ingredient.ID = RI.ingredientID AND Recipe.ID =" + id
                     );
            if (resultSet.next()) {
                 result = resultSet.getInt(1)+ "\n" + resultSet.getString(2) + "\n" + resultSet.getInt(3) + "\n" + resultSet.getString(4) + "\n" + resultSet.getString(5)
-                    + "\n" + resultSet.getBoolean(6) + "\n" + resultSet.getString(7) + "\n" + resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n"
-                    + resultSet.getInt(10) + "\n";
+                    + "\n" + resultSet.getBoolean(6) + "\n" + resultSet.getInt(7) + "\n" + resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n" + resultSet.getInt(10) + "\n" + resultSet.getString(11) + "\n"
+                    + resultSet.getInt(12) + "\n";
                 while (resultSet.next()){
-                        result += resultSet.getString(7) + "\n" + resultSet.getString(8) + "\n"
-                                + resultSet.getString(9) + "\n" + resultSet.getInt(10) + "\n";
+                        result += resultSet.getInt(7) + "\n" + resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n"
+                                + resultSet.getInt(10) + "\n" + resultSet.getString(11) + "\n" + resultSet.getInt(12) + "\n";
                 }
                 result += "& \n";
             } else {
@@ -221,6 +236,70 @@ public class ScrumptiousResource {
         }
         return result;
     }
+
+    /**
+     * @return a string version of all the recipes
+     * Recipe ID
+     * Recipe Name
+     * Recipe Servings
+     * Prep Instructions
+     * Note
+     * Recipe Bookmarked
+     *
+     * Ingredients are then listed as:
+     * Ingredient ID
+     * Ingredient name
+     * Ingredient type
+     * RI ID
+     * RI Unit
+     * RI Quantity
+     *
+     * After a recipe is finished there will be a '&' on a new line
+     * then the next dish will begin in the same way.
+     */
+    @GET
+    @Path("/recipes")
+    @Produces("text/plain")
+    public String getRecipes() {
+        String result = "";
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(
+                    "SELECT  Recipe.ID, Recipe.name, Recipe.servings, Recipe.prepInstructions, Note.content,"
+                            +" Recipe.bookmarked, Ingredient.ID, Ingredient.name, Ingredient.type, RI.ID, RI.unit, RI.quantity \n"+
+                            "FROM Recipe, Dish, Ingredient, RI, Note\n" +
+                            "WHERE Note.recipeID = Recipe.ID AND RI.recipeID = Recipe.ID AND Dish.recipeID = Recipe.ID AND Ingredient.ID = RI.ingredientID"
+            );
+            while (resultSet.next()) {
+                int RecipeID = resultSet.getInt(1);
+                result += resultSet.getInt(1) + "\n" + resultSet.getString(2) + "\n" + resultSet.getInt(3) + "\n" + resultSet.getString(4)
+                        + "\n" + resultSet.getString(5) + "\n" + resultSet.getBoolean(6) + "\n" + resultSet.getInt(7)+ "\n"
+                        + resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n" + resultSet.getInt(10) + "\n"
+                        + resultSet.getString(11) + "\n" + resultSet.getInt(12) + "\n";
+                while (resultSet.next()){
+                    if(resultSet.getInt(1) == RecipeID) {
+                        result += resultSet.getInt(7)+ "\n"+ resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n" + resultSet.getInt(10) +
+                                "\n" + resultSet.getString(11) + "\n" + resultSet.getInt(12) + "\n";
+                    }else {
+                        result += "& \n" + resultSet.getInt(1) + "\n" + resultSet.getString(2) + "\n" + resultSet.getInt(3) + "\n" + resultSet.getString(4)
+                                + "\n" + resultSet.getString(5) + "\n" + resultSet.getBoolean(6) + "\n" + resultSet.getInt(7)+ "\n"
+                                + resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n" + resultSet.getInt(10) + "\n"
+                                + resultSet.getString(11) + "\n" + resultSet.getInt(12) + "\n";
+                        break;
+                    }
+                }
+            }
+            resultSet.close();
+            statement.close();
+            connection.close();
+        } catch (Exception e) {
+            result = e.getMessage();
+        }
+        return result;
+    }
+
 
     /**
      * @return a string version of the shopping list.
@@ -252,55 +331,89 @@ public class ScrumptiousResource {
         }
         return result;
     }
+//    /**
+//     * PUT method for creating an instance of Person with a given ID - If the
+//     * recipe already exists, replace them with the new recipe field values. We do this
+//     * because PUT is idempotent, meaning that running the same PUT several
+//     * times does not change the database.
+//     *
+//     * @param id         the ID for the new player, assumed to be unique
+//     * @param playerLine a string representation of the player in the format: emailAddress name
+//     * @return status message
+//     */
+//    /**    @PUT
+//     *   @Path("/recipe/{id}")
+//     *   @Consumes("text/plain")
+//     *   @Produces("text/plain")
+//     *   public String putRecipe(String recipeLine) {
+//     *       String result;
+//     *       StringTokenizer st = new StringTokenizer(recipeLine);
+//     *       String emailAddress = st.nextToken(), name = st.nextToken();
+//     *       try {
+//     *           Class.forName("org.postgresql.Driver");
+//     *           Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
+//     *           Statement statement = connection.createStatement();
+//     *           ResultSet resultSet = statement.executeQuery("SELECT * FROM Player WHERE id=" + id);
+//     *           if (resultSet.next()) {
+//     *               statement.executeUpdate("UPDATE Player SET emailaddress='" + emailAddress + "' name='" + name + "' WHERE id=" + id);
+//     *               result = "Player " + id + " updated...";
+//     *           } else {
+//     *               statement.executeUpdate("INSERT INTO Player VALUES (" + id + ", '" + emailAddress + "', '" + name + "')");
+//     *               result = "Player " + id + " added...";
+//     *           }
+//     *           resultSet.close();
+//     *           statement.close();
+//     *           connection.close();
+//     *       } catch (Exception e) {
+//     *           result = e.getMessage();
+//     *       }
+//     *       return result;
+//     *   }
+//     */
     /**
-     * PUT method for creating an instance of Person with a given ID - If the
-     * player already exists, replace them with the new player field values. We do this
-     * because PUT is idempotent, meaning that running the same PUT several
-     * times does not change the database.
+     * PUT method for creating Bookmarking a specific recipe
+     * It will look at whatever the bookmark currently is and change it to the opposite
+     * value and save it as that.
      *
-     * @param id         the ID for the new player, assumed to be unique
-     * @param playerLine a string representation of the player in the format: emailAddress name
+     * @param id   The ID of the recipe to be bookmarked
      * @return status message
      */
-/**    @PUT
- *   @Path("/recipe/{id}")
- *   @Consumes("text/plain")
- *   @Produces("text/plain")
- *   public String putRecipe(@PathParam("id") int RecipeID, String RecipeName, int RecipeServings, String RecipePrepInstructions, String NoteContent, boolean RecipeBookmarked, String IngredientName, String IngredientType, String RIunit, int RIQuantity) {
- *       String result;
- *       StringTokenizer st = new StringTokenizer(playerLine);
- *       String emailAddress = st.nextToken(), name = st.nextToken();
- *       try {
- *           Class.forName("org.postgresql.Driver");
- *           Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
- *           Statement statement = connection.createStatement();
- *           ResultSet resultSet = statement.executeQuery("SELECT * FROM Player WHERE id=" + id);
- *           if (resultSet.next()) {
- *               statement.executeUpdate("UPDATE Player SET emailaddress='" + emailAddress + "' name='" + name + "' WHERE id=" + id);
- *               result = "Player " + id + " updated...";
- *           } else {
- *               statement.executeUpdate("INSERT INTO Player VALUES (" + id + ", '" + emailAddress + "', '" + name + "')");
- *               result = "Player " + id + " added...";
- *           }
- *           resultSet.close();
- *           statement.close();
- *           connection.close();
- *       } catch (Exception e) {
- *           result = e.getMessage();
- *       }
- *       return result;
- *   }
- */
+    @PUT
+    @Path("/recipe/{id}")
+    @Consumes("text/plain")
+    @Produces("text/plain")
+    public String putBookmarked(@PathParam("id") int id) {
+        String result;
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT bookmarked FROM Dish WHERE Dish.ID =" + id);
+            if (resultSet.next()) {
+                boolean bookmarked = !resultSet.getBoolean(1);
+                statement.executeUpdate("UPDATE Recipe SET Recipe.bookmarked='" + bookmarked + "' WHERE id=" + id);
+                result = "Recipe Bookmark " + id + " updated...";
+            } else {
+                result = "Something weird happened... The query didn't return content...";
+            }
+            resultSet.close();
+            statement.close();
+            connection.close();
+        } catch (Exception e) {
+            result = e.getMessage();
+        }
+        return result;
+    }
+
+
     /**
-     * POST method for creating an instance of Person with a new, unique ID
-     * number. We do this because POST is not idempotent, meaning that running
-     * the same POST several times creates multiple objects with unique IDs but
-     * with the same values.
-     * <p/>
-     * The method creates a new, unique ID by querying the player table for the
-     * largest ID and adding 1 to that. Using a sequence would be a better solution.
+     * POST method for creating a new Dish
      *
-     * @param DishLine a string representation of the player in the format: emailAddress name
+     * The method parses through a string to find the relevant information
+     * The method creates a new, unique ID by querying the Dish table for the
+     * largest ID and adding 1 to that.
+     *
+     * @param DishLine a string representation of the new Dish in the format: Recipe.ID Servings Date
      * @return status message
      */
     @POST
@@ -331,31 +444,31 @@ public class ScrumptiousResource {
         return result;
     }
 
-    /**
-     * DELETE method for deleting and instance of recipe with the given ID. If
-     * the recipe doesn't exist, then don't delete anything. DELETE is idempotent, so
-     * sending the same command multiple times should result in the same side
-     * effect, though the return value may be different.
-     *
-     * @param id the ID of the recipe to be returned
-     * @return a simple text confirmation message
-     */
-    @DELETE
-    @Path("/recipes/{id}")
-    @Produces("text/plain")
-    public String deleteRecipe(@PathParam("id") int id) {
-        try {
-            Class.forName("org.postgresql.Driver");
-            Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
-            Statement statement = connection.createStatement();
-            statement.executeUpdate("DELETE FROM Recipe, RI, Note, Dish WHERE Recipe.id=" + id +" AND Recipe.ID = RI.RecipeID AND Note.RecipeID = Recipe.ID AND Dish.RecipeID = Recipe.ID");
-            statement.close();
-            connection.close();
-        } catch (Exception e) {
-            return e.getMessage();
-        }
-        return "Recipe " + id + " deleted...";
-    }
+//    /**
+//     * DELETE method for deleting and instance of recipe with the given ID. If
+//     * the recipe doesn't exist, then don't delete anything. DELETE is idempotent, so
+//     * sending the same command multiple times should result in the same side
+//     * effect, though the return value may be different.
+//     *
+//     * @param id the ID of the recipe to be returned
+//     * @return a simple text confirmation message
+//     */
+//    @DELETE
+//    @Path("/recipes/{id}")
+//    @Produces("text/plain")
+//    public String deleteRecipe(@PathParam("id") int id) {
+//        try {
+//            Class.forName("org.postgresql.Driver");
+//            Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
+//            Statement statement = connection.createStatement();
+//            statement.executeUpdate("DELETE FROM Recipe, RI, Note, Dish WHERE Recipe.id=" + id +" AND Recipe.ID = RI.RecipeID AND Note.RecipeID = Recipe.ID AND Dish.RecipeID = Recipe.ID");
+//            statement.close();
+//            connection.close();
+//        } catch (Exception e) {
+//            return e.getMessage();
+//        }
+//        return "Recipe " + id + " deleted...";
+//    }
 
    /**
     * Deletes Dish
