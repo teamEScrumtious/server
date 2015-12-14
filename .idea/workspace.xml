@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d039c3c5-519b-4798-9640-6a10bfcbf978" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sql files/scrumtiousDatabase.sql" afterPath="$PROJECT_DIR$/.sql files/scrumtiousDatabase.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ScrumptiousServer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,16 +28,9 @@
       <file leaf-file-name="ScrumptiousResource.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ScrumptiousResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50688076">
-              <caret line="151" column="21" selection-start-line="151" selection-start-column="21" selection-end-line="156" selection-end-column="40" />
-              <folding>
-                <marker date="1449153785280" expanded="true" signature="1437:1457" placeholder="SELECT * FRO..RECIPE..." />
-                <marker date="1449153785280" expanded="true" signature="2295:2502" placeholder="SELECT Recip..Recipe..." />
-                <marker date="1449153785280" expanded="true" signature="3345:3448" placeholder="SELECT ID, n..Recipe..." />
-                <marker date="1449153785280" expanded="true" signature="4836:5470" placeholder="SELECT Dish...Recipe..." />
-                <marker date="1449153785280" expanded="true" signature="8009:8394" placeholder="SELECT Recip..Recipe..." />
-                <marker date="1449153785280" expanded="true" signature="9877:10289" placeholder="SELECT RI.qu..Ingredient..." />
-              </folding>
+            <state vertical-scroll-proportion="1.1281464">
+              <caret line="180" column="31" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -46,7 +38,7 @@
       <file leaf-file-name="scrumtiousDatabase.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.sql files/scrumtiousDatabase.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.907408">
+            <state vertical-scroll-proportion="0.0">
               <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
               <folding />
             </state>
@@ -80,8 +72,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="44" />
-    <option name="y" value="40" />
+    <option name="x" value="1678" />
+    <option name="y" value="47" />
     <option name="width" value="1400" />
     <option name="height" value="820" />
   </component>
@@ -108,6 +100,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -184,7 +177,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -493,6 +485,7 @@
       <workItem from="1449107038971" duration="5751000" />
       <workItem from="1449148812229" duration="2792000" />
       <workItem from="1449251175935" duration="2139000" />
+      <workItem from="1450103292875" duration="604000" />
     </task>
     <task id="LOCAL-00001" summary="Added another real recipe">
       <created>1449151684606</created>
@@ -528,10 +521,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15392000" />
+    <option name="totallyTimeSpent" value="15996000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="44" y="40" width="1400" height="820" extended-state="0" />
+    <frame x="1678" y="47" width="1400" height="820" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -543,7 +536,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946298" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32656023" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32510886" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23432836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -591,14 +584,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1449153785280" expanded="true" signature="1437:1457" placeholder="SELECT * FRO..RECIPE..." />
-            <marker date="1449153785280" expanded="true" signature="2295:2502" placeholder="SELECT Recip..Recipe..." />
-            <marker date="1449153785280" expanded="true" signature="3345:3448" placeholder="SELECT ID, n..Recipe..." />
-            <marker date="1449153785280" expanded="true" signature="4836:5470" placeholder="SELECT Dish...Recipe..." />
-            <marker date="1449153785280" expanded="true" signature="8009:8394" placeholder="SELECT Recip..Recipe..." />
-            <marker date="1449153785280" expanded="true" signature="9877:10289" placeholder="SELECT RI.qu..Ingredient..." />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.sql files/scrumtiousDatabase.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ScrumptiousResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -614,14 +616,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1449153785280" expanded="true" signature="1437:1457" placeholder="SELECT * FRO..RECIPE..." />
-            <marker date="1449153785280" expanded="true" signature="2295:2502" placeholder="SELECT Recip..Recipe..." />
-            <marker date="1449153785280" expanded="true" signature="3345:3448" placeholder="SELECT ID, n..Recipe..." />
-            <marker date="1449153785280" expanded="true" signature="4836:5470" placeholder="SELECT Dish...Recipe..." />
-            <marker date="1449153785280" expanded="true" signature="8009:8394" placeholder="SELECT Recip..Recipe..." />
-            <marker date="1449153785280" expanded="true" signature="9877:10289" placeholder="SELECT RI.qu..Ingredient..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -629,20 +624,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1449153785280" expanded="true" signature="1437:1457" placeholder="SELECT * FRO..RECIPE..." />
-            <marker date="1449153785280" expanded="true" signature="2295:2502" placeholder="SELECT Recip..Recipe..." />
-            <marker date="1449153785280" expanded="true" signature="3345:3448" placeholder="SELECT ID, n..Recipe..." />
-            <marker date="1449153785280" expanded="true" signature="4836:5470" placeholder="SELECT Dish...Recipe..." />
-            <marker date="1449153785280" expanded="true" signature="8009:8394" placeholder="SELECT Recip..Recipe..." />
-            <marker date="1449153785280" expanded="true" signature="9877:10289" placeholder="SELECT RI.qu..Ingredient..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.sql files/scrumtiousDatabase.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.907408">
+        <state vertical-scroll-proportion="0.0">
           <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
           <folding />
         </state>
@@ -650,16 +638,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ScrumptiousResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50688076">
-          <caret line="151" column="21" selection-start-line="151" selection-start-column="21" selection-end-line="156" selection-end-column="40" />
-          <folding>
-            <marker date="1449153785280" expanded="true" signature="1437:1457" placeholder="SELECT * FRO..RECIPE..." />
-            <marker date="1449153785280" expanded="true" signature="2295:2502" placeholder="SELECT Recip..Recipe..." />
-            <marker date="1449153785280" expanded="true" signature="3345:3448" placeholder="SELECT ID, n..Recipe..." />
-            <marker date="1449153785280" expanded="true" signature="4836:5470" placeholder="SELECT Dish...Recipe..." />
-            <marker date="1449153785280" expanded="true" signature="8009:8394" placeholder="SELECT Recip..Recipe..." />
-            <marker date="1449153785280" expanded="true" signature="9877:10289" placeholder="SELECT RI.qu..Ingredient..." />
-          </folding>
+        <state vertical-scroll-proportion="1.1281464">
+          <caret line="180" column="31" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
