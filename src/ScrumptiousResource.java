@@ -36,6 +36,52 @@ public class ScrumptiousResource {
     private static final String DB_PASSWORD = "postgres";
 
      /**
+    @GET
+    @Path("/recipes")
+    @Produces("text/plain")
+    public String getRecipes() {
+        String result = "";
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM RECIPE");
+            while (resultSet.next()) {
+                result += resultSet.getInt(1) + " " + resultSet.getString(2) + "\n";
+            }
+            resultSet.close();
+            statement.close();
+            connection.close();
+        } catch (Exception e) {
+            result = e.getMessage();
+        }
+        return result;
+    }
+
+    @GET
+    @Path("/recipes/alpha")
+    @Produces("text/plain")
+    public String getRecipesAlpha() {
+        String result = "";
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT ID, name, prepInstructions, servings FROM RECIPE");
+            while (resultSet.next()) {
+                result += resultSet.getInt(1) + "\n" + resultSet.getString(2) + "\n" + resultSet.getString(3) + "\n" + resultSet.getString(4) + "\n";
+            }
+            resultSet.close();
+            statement.close();
+            connection.close();
+        } catch (Exception e) {
+            result = e.getMessage();
+        }
+        return result;
+    }
+
+
+    /**
      * @return a string version of the recent recipe records
      */
     @GET
@@ -180,10 +226,7 @@ public class ScrumptiousResource {
                         result += resultSet.getInt(10)+ "\n"+ resultSet.getString(11) + "\n" + resultSet.getString(12) + "\n" + resultSet.getInt(13) + "\n" + resultSet.getString(14) + "\n"
                                 + resultSet.getInt(15) + "\n";
                 }else {
-                        result += "& \n" + resultSet.getInt(1) + "\n" + resultSet.getInt(2) +"\n"+ resultSet.getTimestamp(3) + "\n" + resultSet.getInt(4) + "\n" + resultSet.getString(5)
-                                + "\n" + resultSet.getInt(6) + "\n" + resultSet.getString(7) + "\n" + resultSet.getString(8) + "\n" + resultSet.getBoolean(9)
-                                + "\n" + resultSet.getInt(10)+ "\n"+ resultSet.getString(11) + "\n" + resultSet.getString(12) + "\n" + resultSet.getInt(13) + "\n" + resultSet.getString(14) + "\n"
-                                + resultSet.getInt(15) + "\n";
+                        result += "&\n";
                         break;
                     }
                 }
