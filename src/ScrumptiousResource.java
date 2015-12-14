@@ -167,10 +167,7 @@ public class ScrumptiousResource {
                         result += resultSet.getInt(10)+ "\n"+ resultSet.getString(11) + "\n" + resultSet.getString(12) + "\n" + resultSet.getInt(13) + "\n" + resultSet.getString(14) + "\n"
                                 + resultSet.getInt(15) + "\n";
                 }else {
-                        result += "& \n" + resultSet.getInt(1) + "\n" + resultSet.getInt(2) +"\n"+ resultSet.getTimestamp(3) + "\n" + resultSet.getInt(4) + "\n" + resultSet.getString(5)
-                                + "\n" + resultSet.getInt(6) + "\n" + resultSet.getString(7) + "\n" + resultSet.getString(8) + "\n" + resultSet.getBoolean(9)
-                                + "\n" + resultSet.getInt(10)+ "\n"+ resultSet.getString(11) + "\n" + resultSet.getString(12) + "\n" + resultSet.getInt(13) + "\n" + resultSet.getString(14) + "\n"
-                                + resultSet.getInt(15) + "\n";
+                        result += "&\n";
                         break;
                     }
                 }
