@@ -332,12 +332,12 @@ public class ScrumptiousResource {
     }
 
     /**
-     * DELETE method for deleting and instance of player with the given ID. If
-     * the player doesn't exist, then don't delete anything. DELETE is idempotent, so
+     * DELETE method for deleting and instance of recipe with the given ID. If
+     * the recipe doesn't exist, then don't delete anything. DELETE is idempotent, so
      * sending the same command multiple times should result in the same side
      * effect, though the return value may be different.
      *
-     * @param id the ID of the player to be returned
+     * @param id the ID of the recipe to be returned
      * @return a simple text confirmation message
      */
     @DELETE
@@ -357,6 +357,28 @@ public class ScrumptiousResource {
         return "Recipe " + id + " deleted...";
     }
 
+   /**
+    * Deletes Dish
+    *
+    * @param id the ID of the Dish to be deleted
+    * @return a simple text confirmation message
+    */
+    @DELETE
+    @Path("/recipes/{id}")
+    @Produces("text/plain")
+    public String deleteDish(@PathParam("id") int id) {
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
+            Statement statement = connection.createStatement();
+            statement.executeUpdate("DELETE FROM Dish WHERE Dish.id=" + id);
+            statement.close();
+            connection.close();
+        } catch (Exception e) {
+            return e.getMessage();
+        }
+        return "Recipe " + id + " deleted...";
+    }
 
 
     public static void main(String[] args) throws IOException {
