@@ -35,7 +35,7 @@ public class ScrumptiousResource {
     private static final String DB_LOGIN_ID = "postgres";
     private static final String DB_PASSWORD = "postgres";
 
-     /**
+    /**
     @GET
     @Path("/recipes")
     @Produces("text/plain")
@@ -57,28 +57,29 @@ public class ScrumptiousResource {
         }
         return result;
     }
+     **/
 
-    @GET
-    @Path("/recipes/alpha")
-    @Produces("text/plain")
-    public String getRecipesAlpha() {
-        String result = "";
-        try {
-            Class.forName("org.postgresql.Driver");
-            Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT ID, name, prepInstructions, servings FROM RECIPE");
-            while (resultSet.next()) {
-                result += resultSet.getInt(1) + "\n" + resultSet.getString(2) + "\n" + resultSet.getString(3) + "\n" + resultSet.getString(4) + "\n";
-            }
-            resultSet.close();
-            statement.close();
-            connection.close();
-        } catch (Exception e) {
-            result = e.getMessage();
-        }
-        return result;
-    }
+//    @GET
+//    @Path("/recipes/alpha")
+//    @Produces("text/plain")
+//    public String getRecipesAlpha() {
+//        String result = "";
+//        try {
+//            Class.forName("org.postgresql.Driver");
+//            Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
+//            Statement statement = connection.createStatement();
+//            ResultSet resultSet = statement.executeQuery("SELECT ID, name, prepInstructions, servings FROM RECIPE");
+//            while (resultSet.next()) {
+//                result += resultSet.getInt(1) + "\n" + resultSet.getString(2) + "\n" + resultSet.getString(3) + "\n" + resultSet.getString(4) + "\n";
+//            }
+//            resultSet.close();
+//            statement.close();
+//            connection.close();
+//        } catch (Exception e) {
+//            result = e.getMessage();
+//        }
+//        return result;
+//    }
 
 
     /**
@@ -267,7 +268,7 @@ public class ScrumptiousResource {
                         result += resultSet.getInt(7) + "\n" + resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n"
                                 + resultSet.getInt(10) + "\n" + resultSet.getString(11) + "\n" + resultSet.getInt(12) + "\n";
                 }
-                result += "& \n";
+                result += "&\n";
             } else {
                 result = "nothing found...";
             }
@@ -298,7 +299,7 @@ public class ScrumptiousResource {
      * RI Quantity
      *
      * After a recipe is finished there will be a '&' on a new line
-     * then the next dish will begin in the same way.
+     * then the next recipe will begin in the same way.
      */
     @GET
     @Path("/recipes")
@@ -326,10 +327,7 @@ public class ScrumptiousResource {
                         result += resultSet.getInt(7)+ "\n"+ resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n" + resultSet.getInt(10) +
                                 "\n" + resultSet.getString(11) + "\n" + resultSet.getInt(12) + "\n";
                     }else {
-                        result += "& \n" + resultSet.getInt(1) + "\n" + resultSet.getString(2) + "\n" + resultSet.getInt(3) + "\n" + resultSet.getString(4)
-                                + "\n" + resultSet.getString(5) + "\n" + resultSet.getBoolean(6) + "\n" + resultSet.getInt(7)+ "\n"
-                                + resultSet.getString(8) + "\n" + resultSet.getString(9) + "\n" + resultSet.getInt(10) + "\n"
-                                + resultSet.getString(11) + "\n" + resultSet.getInt(12) + "\n";
+                        result += "&\n";
                         break;
                     }
                 }
@@ -422,7 +420,7 @@ public class ScrumptiousResource {
      * @return status message
      */
     @PUT
-    @Path("/recipe/{id}")
+    @Path("/recipe/bookmark/{id}")
     @Consumes("text/plain")
     @Produces("text/plain")
     public String putBookmarked(@PathParam("id") int id) {
