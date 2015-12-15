@@ -116,7 +116,7 @@ Insert Into Ingredient Values (70, 'Powdered Sugar', 'Baking');
 Insert Into Ingredient Values (71, 'Cream of Tartar', 'Spice');
 
 
-Insert Into Recipe Values (1, 'Nathans Tacos', '1. Brown the Beef. \n2. Pour a the water and the taco seasoning into the pan with the beef and cook until water mostly boils off. \n3. Warm other ingredients to desired temperature. \n4. Mix as desired. \n5. Enjoy.', TRUE, 5);
+Insert Into Recipe Values (1, 'Nathans Tacos', '1. Brown the Beef. 2. Pour a the water and the taco seasoning into the pan with the beef and cook until water mostly boils off. 3. Warm other ingredients to desired temperature. 4. Mix as desired. 5. Enjoy.', TRUE, 5);
 Insert Into RI Values (16, 1, 16, 'lb' , 0.5);
 Insert Into RI Values (17, 1, 17, 'tbsp', 1);
 Insert Into RI Values (18, 1, 18, 'cup', 1);
@@ -124,7 +124,7 @@ Insert Into RI Values (19, 1, 19, ' ', 5);
 Insert Into RI Values (20, 1, 20, ' ', 6);
 Insert Into Note Values(1,1, NULL);
 
-Insert Into Recipe Values (2, 'Baked Oatmeal', '1. Preheat oven to 325^F \n2. Mix all ingredients together. \n3. Pour into 9in cake pan \n4. Bake for 40 minutes. Can also be made ahead a few days and baked in the morning.', TRUE, 4);
+Insert Into Recipe Values (2, 'Baked Oatmeal', '1. Preheat oven to 325^F 2. Mix all ingredients together. 3. Pour into 9in cake pan 4. Bake for 40 minutes. Can also be made ahead a few days and baked in the morning.', TRUE, 4);
 Insert Into RI Values (21, 2, 21, 'cup' , 2);
 Insert Into RI Values (22, 2, 22, 'cup', 0.5);
 Insert Into RI Values (23, 2, 23, 'tsp', 1);
@@ -134,21 +134,21 @@ Insert Into RI Values (26, 2, 25, ' ', 2);
 Insert Into RI Values (68, 2, 55, 'cup', .5);
 Insert Into Note Values(2, 2, NULL);
 
-Insert Into Recipe Values (3, 'Pizza Dough', '1. Mix yeast and warm water. \n2. add 1.5 cups flour. \n3. Add oil and 1-1.5 cups more flour. \n4. knead until smooth and elastic. \n5. Let rise until doubled. \n6. Punch and shape into pizza crust or pretzels!', TRUE, 4);
+Insert Into Recipe Values (3, 'Pizza Dough', '1. Mix yeast and warm water. 2. add 1.5 cups flour. 3. Add oil and 1-1.5 cups more flour. 4. knead until smooth and elastic. 5. Let rise until doubled. 6. Punch and shape into pizza crust or pretzels!', TRUE, 4);
 Insert Into RI Values (27, 3, 27, 'cup' , 2);
 Insert Into RI Values (28, 3, 34, 'tbsp', 1);
 Insert Into RI Values (29, 3, 26, 'cup', 3);
 Insert Into RI Values (30, 3, 35, 'tbsp', 3);
 Insert Into Note Values(3,3, 'Make sure water is warm, but not hot so it does not kill the yeast.');
 
-Insert Into Recipe Values (4, 'Pie Crust', '1. Mix flour and salt. \n2. Cut cold butter into mixture with pastry cutter. \n3. Add 2-3 tablespoons cold water until dough holds together. Do not let it get too sticky.', TRUE, 8);
+Insert Into Recipe Values (4, 'Pie Crust', '1. Mix flour and salt. 2. Cut cold butter into mixture with pastry cutter. 3. Add 2-3 tablespoons cold water until dough holds together. Do not let it get too sticky.', TRUE, 8);
 Insert Into RI Values (33, 4, 22, 'cup' , .5);
 Insert Into RI Values (34, 4, 26, 'cup', 1.5);
 Insert Into RI Values (35, 4, 1, 'tsp', 1);
 Insert Into RI Values (36, 4, 27, 'tbsp', 3);
 Insert Into Note Values(4, 4, NULL);
 
-Insert Into Recipe Values (5, 'Pea Soup', '1. Add split green peas, spareribs, bacon and water and simmer for approximatle 1.5 hours. \n2. Add chopped leeks, celery, onion, carrots and potato and cook for another hour until the soup becomes thick. \n3. Take the meat out and remove bones. \n4. Puree the soup and add the meat back in', FALSE, 8);
+Insert Into Recipe Values (5, 'Pea Soup', '1. Add split green peas, spareribs, bacon and water and simmer for approximatle 1.5 hours. 2. Add chopped leeks, celeriac, onion, carrots and potato and cook for another hour until the soup becomes thick. 3. Take the meat out and remove bones. 4. Puree the soup and add the meat back in', FALSE, 8);
 Insert Into RI Values (37, 5, 28, 'cup' , 3.5);
 Insert Into RI Values (38, 5, 33, 'lb', 1);
 Insert Into RI Values (39, 5, 36, 'lb', .5);
@@ -160,7 +160,7 @@ Insert Into RI Values (44, 5, 31, ' ', 1);
 Insert Into RI Values (45, 5, 32, ' ', 1);
 Insert Into Note Values(5, 5, NULL);
 
-Insert Into Recipe Values (6, 'Chicken Marsala', '1. Place chicken breasts between 2 pieces of wax paper and pound into 1/4 inch thick with a meat mallet. Dust chicken with flour, salt, pepper and oregano. 2. In a skillet, fry chicken in olive oil over medium heat. Cook until done, turning to cook evenly. Set aside and keep warm. 3. In the same pan, melt the butter over medium heat; add mushrooms, sun-dried tomatoes, and Marsala wine. Cook for approximately 10 minutes, stirring occasionally. Mix in spinach and cook for about 2 minutes. Serve over chicken', FALSE, 4);
+Insert Into Recipe Values (6, 'Chicken Marsala', '1. Place chicken breasts between 2 pieces of wax paper and pound into 1/4 inch thick wtih a meat mallet. Dust chicken with flour, salt, pepper and oregano. 2. In a skillet, fry chicken in olive oil over medium heat. Cook until done, turning to cook evenly. Set aside and keep warm. 3. In the same pan, melt the butter over medium heat; add mushrooms, sun-dried tomatoes, and Marsala wine. Cook for approximately 10 minutes, stirring occasionally. Mix in spinach and cook for about 2 minutes. Serve over chicken', FALSE, 4);
 Insert Into RI Values (46, 6, 15, ' ', 4);
 Insert Into RI Values (47, 6, 26, 'cup', .25);
 Insert Into RI Values (48, 6, 39, 'tbsp', 1);
@@ -183,7 +183,7 @@ Insert Into RI Values (60, 7, 35, 'cup', .25);
 Insert Into RI Values (61, 7, 46, 'tbsp', 2);
 Insert Into Note Values(7, 7, NULL);
 
-Insert Into Recipe Values (8, 'Easy Beef Enchiladas', '1. Preheat oven to 350 degrees F(175 degrees C) In a medium skillet, cook ground beef and chopped onion until beef is browned evenly and onion is tender. \n2. Prepare enchilada sauce according to package instructions. Pour 1/4 of the sauce into the bottom of a 9x13 inch baking dish. \n3. On each flour tortilla, place an equal portion of the ground beef mixture and about 1 ounce of shredded Cheddar cheese, reserving at least 1/2 cup of the cheese. Then tightly roll the tortillas and place seam side down in the baking dish. \n4. Pour the remaining sauce over the top of the enchiladas and sprinkle with the remaining shredded cheese and olives. \n5. Bake in a preheated oven for 20 minutes, or until the sauce is bubbly and cheese is thoroughly melted.', FALSE, 10);
+Insert Into Recipe Values (8, 'Easy Beef Enchiladas', '1. Preheat oven to 350 degrees F(175 degrees C) In a medium skillet, cook ground beef and chopped onion until beef is browned evenly and onion is tender. 2. Prepare enchilada sauce according to package instructions. Pour 1/4 of the sauce into the bottom of a 9x13 inch baking dish. 3. On each flour tortilla, place an equal portion of the ground beef mixture and about 1 ounce of shredded Cheddar cheese, reserving at least 1/2 cup of the cheese. Then tightly roll the tortillas and place seam side down in the baking dish. 4. Pour the remaining sauce over the top of the enchiladas and sprinkle with the remaining shredded cheese and olives. 5. Bake in a preheated oven for 20 minutes, or until the sauce is bubbly and cheese is thoroughly melted.', FALSE, 10);
 Insert Into RI Values (62, 8, 49, 'lb', 1);
 Insert Into RI Values (63, 8, 30, ' ', 1);
 Insert Into RI Values (64, 8, 50, 'oz', 1.5);
@@ -192,7 +192,7 @@ Insert Into RI Values (66, 8, 30, 'cups', 2);
 Insert Into RI Values (67, 8, 52, 'oz', 2.25);
 Insert Into Note Values(8, 8, NULL);
 
-Insert Into Recipe Values (9, 'Blueberry Pie','1. Zest lemon and lime and set aside. Squeeze juice from lemon and lime. \n2. In a large mixing bowl, combine sugar and 3 tbsp  of flour. Stir in berries, lemon & lime zest, and half of the juice.\n2. Pour mixture into pie crust and seal with the remaining crust. \n3. If desired, brush pastry with a little milk and sprinkle additional sugar. To prevent over browning, cover pie with aluminium foil \n4. Bake in a 375 degree F oven for 25 minutes. Remove foil and bake for another 25-30 minutes more, or until top is golden. \n5. Cool on wire rack', FALSE, 11);
+Insert Into Recipe Values (9, 'Blueberry Pie','1. Zest lemon and lime and set aside. Squeeze juice from lemon and lime. 2. In a large mixing bowl, combine sugar and 3 tbsp  of flour. Stir in berries, lemon & lime zest, and half of the juice. 3. Pour mixture into pie crust and seal with the remaining crust. 4. If desired, brush pastry with a little milk and sprinkle additional sugar. To prevent over browning, cover pie with aluminium foil 5. Bake in a 375 degree F oven for 25 minutes. Remove foil and bake for another 25-30 minutes more, or until top is golden. 6. Cool on wire rack', FALSE, 11);
 Insert Into RI Values (76, 9, 53, 'cup', 5);
 Insert Into RI Values (75, 9, 57, 'cup', .66 );
 Insert Into RI Values (70, 9, 56, 'cup', .66);
@@ -202,7 +202,7 @@ Insert Into RI Values (73, 9, 59, ' ', 1);
 Insert Into RI Values (74, 9, 60, ' ', 1);
 Insert Into Note Values(9, 9, NULL);
 
-Insert Into Recipe Values (10, 'Ginger-Molasses Cookies','1. Preheat oven to 325^F. \n2. Cream sugar and oil. \n3. Add eggs, then molasses \n4. Stir in cinnamon, ginger, baking soda, and salt. \n 5. Add flour gradually. \n6. Spoon onto parchment-lined cookie sheet and bake for 10 minutes or less, until puffy. Do not over-bake! \n7. Enjoy!', True, 24);
+Insert Into Recipe Values (10, 'Ginger-Molasses Cookies','1. Preheat oven to 325^F. 2. Cream sugar and oil. 3. Add eggs, then molasses 4. Stir in cinnamon, ginger, baking soda, and salt. 5. Add flour gradually. 6. Spoon onto parchment-lined cookie sheet and bake for 10 minutes or less, until puffy. Do not over-bake! 7. Enjoy!', True, 24);
 Insert Into RI Values (77, 10, 56, 'cup', 2);
 Insert Into RI Values (78, 10, 64, 'cup', 1.5 );
 Insert Into RI Values (79, 10, 25, ' ', 2);
@@ -213,7 +213,7 @@ Insert Into RI Values (83, 10, 23, 'tsp', 4);
 Insert Into RI Values (84, 10, 26, 'cup', 4);
 Insert Into Note Values(10, 10, NULL);
 
-Insert Into Recipe Values (11, 'Tammies Chocolate Chip Cookies', '1.Preheat oven to 350 degrees F (175 degrees C). \n2. Sift together the flour and baking soda, set aside. \n3. In a large bowl, cream together the butter, brown sugar, and white sugar. \n4. Beat in the instant pudding mix until blended. \n5.Stir in the eggs and vanilla. \n6. Blend in the flour mixture. \n7. Finally, stir in the chocolate chips and nuts. \n8. Drop cookies by rounded spoonfuls onto ungreased cookie sheets. \n9.Bake for 10 to 12 minutes in the preheated oven. Edges should be golden brown.', TRUE, 72);
+Insert Into Recipe Values (11, 'Tammies Chocolate Chip Cookies', '1.Preheat oven to 350 degrees F (175 degrees C). 2. Sift together the flour and baking soda, set aside. 3. In a large bowl, cream together the butter, brown sugar, and white sugar. 4. Beat in the instant pudding mix until blended. 5.Stir in the eggs and vanilla. 6. Blend in the flour mixture. 7. Finally, stir in the chocolate chips and nuts. 8. Drop cookies by rounded spoonfuls onto ungreased cookie sheets. 9.Bake for 10 to 12 minutes in the preheated oven. Edges should be golden brown.', TRUE, 72);
 Insert Into RI Values (85, 11, 26, 'cup', 4.5);
 Insert Into RI Values (86, 11, 23, 'tsp', 2);
 Insert Into RI Values (87, 11, 22, 'cup', 2);
@@ -226,7 +226,7 @@ Insert Into RI Values (93, 11, 67, 'cup', 4);
 Insert Into RI Values (94, 11, 68, 'cup', 2);
 Insert Into Note Values (11, 11, NULL);
 
-Insert Into Recipe Values (12, 'Lias Christmas Cookies', '1. Preheat oven to 375 ^F \n2. In a bowl, cream butter and sugar. Add egg and extracts. \n3. Combine flour, baking soda and cream of tartar; gradually add to the creamed mixture and mix well. \n4. Chill for 2-3 hours.\n5. On a lightly floured surface, roll dough to 1/8-in. thickness. Cut into desired shapes. Place on ungreased baking sheets. \n6.Bake at 375° for 7-8 minutes or until edges begin to brown. \n7.Cool on a wire rack.', TRUE, 30);
+Insert Into Recipe Values (12, 'Lias Christmas Cookies', '1. Preheat oven to 375 ^F 2. In a bowl, cream butter and sugar. Add egg and extracts. 3. Combine flour, baking soda and cream of tartar; gradually add to the creamed mixture and mix well. 4. Chill for 2-3 hours.5. On a lightly floured surface, roll dough to 1/8-in. thickness. Cut into desired shapes. Place on ungreased baking sheets. 6.Bake at 375° for 7-8 minutes or until edges begin to brown. 7.Cool on a wire rack.', TRUE, 30);
 Insert Into RI Values (95, 12, 22, 'cup', 1);
 Insert Into RI Values (96, 12, 70, 'cup', 1.5);
 Insert Into RI Values (97, 12, 25, ' ', 1);
@@ -238,7 +238,7 @@ Insert Into RI Values (102, 12, 71, 'tsp', 1);
 Insert Into Note Values (12, 12, NULL);
 
 
-Insert Into Recipe Values (13, 'Lias Buttercream Frosting', '1. Beat sugar and butter in a bowl. \n2. Add vanilla and almond', TRUE, 48);
+Insert Into Recipe Values (13, 'Lias Buttercream Frosting', '1. Beat sugar and butter in a bowl. 2. Add vanilla and almond', TRUE, 48);
 Insert Into RI Values (103, 13, 22, 'cup', 1);
 Insert Into RI Values (104, 13, 70, 'cup', 2);
 Insert Into RI Values (105, 13, 66, 'tsp', .5);
@@ -254,7 +254,7 @@ Insert Into Dish Values (7, 11, 72, '2015-12-15 09:15:00');
 Insert Into Dish Values (8, 12, 30, '2015-12-15 09:30:00');
 Insert Into Dish Values (9, 13, 30, '2015-12-15 09:45:00');
 Insert Into Dish Values (10, 5, 6, '2015-12-16 18:30:00');
-Insert Into Dish Values (10, 7, 8, '2015-12-17 18:40:00');
+Insert Into Dish Values (15, 7, 8, '2015-12-17 18:40:00');
 Insert Into Dish Values (11, 6, 4, '2015-12-17 18:30:00');
 Insert Into Dish Values (12, 1, 4, '2015-12-18 18:30:00');
 Insert Into Dish Values (13, 3, 12, '2015-12-19 18:30:00');
