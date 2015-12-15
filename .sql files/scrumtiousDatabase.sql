@@ -103,6 +103,11 @@ Insert Into Ingredient Values (57, 'Shortening', 'Baking');
 Insert Into Ingredient Values (58, 'Lime', 'Produce');
 Insert Into Ingredient Values (59, 'Lemon', 'Produce');
 Insert Into Ingredient Values (60, 'Double pie crust', 'Baking');
+Insert Into Ingredient Values (61, 'Cinnamon', 'Spice');
+Insert Into Ingredient Values (62, 'Molasses', 'Baking');
+Insert Into Ingredient Values (63, 'Ginger', 'Spice');
+Insert Into Ingredient Values (64, 'Canola Oil', 'Baking');
+
 
 
 Insert Into Recipe Values (1, 'Nathans Tacos', '1. Brown the Beef. \n2. Pour a the water and the taco seasoning into the pan with the beef and cook until water mostly boils off. \n3. Warm other ingredients to desired temperature. \n4. Mix as desired. \n5. Enjoy.', TRUE, 5);
@@ -191,7 +196,20 @@ Insert Into RI Values (73, 9, 59, NULL, 1);
 Insert Into RI Values (74, 9, 60, NULL, 1);
 Insert Into Note Values(9, 9, NULL);
 
+Insert Into Recipe Values (10, 'Ginger-Molasses Cookies','1. Preheat oven to 325^F. \n2. Cream sugar and oil. \n3. Add eggs, then molasses \n4. Stir in cinnamon, ginger, baking soda, and salt. \n 5. Add flour gradually. \n6. Spoon onto parchment-lined cookie sheet and bake for 10 minutes or less, until puffy. Do not over-bake! \n7. Enjoy!', True, 24);
+Insert Into RI Values (77, 10, 56, 'cup', 2);
+Insert Into RI Values (78, 10, 64, 'cup', 1.5 );
+Insert Into RI Values (79, 10, 25, ' ', 2);
+Insert Into RI Values (80, 10, 63, 'tbsp', 1);
+Insert Into RI Values (81, 10, 62, 'tsp', 2);
+Insert Into RI Values (82, 10, 1, 'tsp', 1);
+Insert Into RI Values (83, 10, 23, 'tsp', 4);
+Insert Into RI Values (83, 10, 26, 'cup', 4);
+Insert Into Note Values(10, 10, NULL);
+
+
 
 Insert Into Dish Values (3, 4, 4, '2015-12-06 18:00:00');
 Insert Into Dish Values (4, 4, 3, '2015-12-02 12:00:00');
 Insert Into Dish Values (5, 5, 4, '2015-12-16 08:00:00');
+Insert Into Dish Values (6, 10, 24, '2015-12-15 09:00:00');
