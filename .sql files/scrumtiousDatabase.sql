@@ -103,6 +103,10 @@ Insert Into Ingredient Values (57, 'Shortening', 'Baking');
 Insert Into Ingredient Values (58, 'Lime', 'Produce');
 Insert Into Ingredient Values (59, 'Lemon', 'Produce');
 Insert Into Ingredient Values (60, 'Double pie crust', 'Baking');
+Insert Into Ingredient Values (61, 'Cinnamon', 'Spice');
+Insert Into Ingredient Values (62, 'Molasses', 'Baking');
+Insert Into Ingredient Values (63, 'Ginger', 'Spice');
+Insert Into Ingredient Values (64, 'Canola Oil', 'Baking');
 
 
 Insert Into Recipe Values (1, 'Nathans Tacos', '1. Brown the Beef. \n2. Pour a the water and the taco seasoning into the pan with the beef and cook until water mostly boils off. \n3. Warm other ingredients to desired temperature. \n4. Mix as desired. \n5. Enjoy.', TRUE, 5);
@@ -120,7 +124,7 @@ Insert Into RI Values (23, 2, 23, 'tsp', 1);
 Insert Into RI Values (24, 2, 24, 'cup', 1);
 Insert Into RI Values (25, 2, 1, 'tsp', 1);
 Insert Into RI Values (26, 2, 25, NULL, 2);
-Insert Into RI Values (68, 2, 55, 'cup', 1/2);
+Insert Into RI Values (68, 2, 55, 'cup', .5);
 Insert Into Note Values(2, 2, NULL);
 
 Insert Into Recipe Values (3, 'Pizza Dough', '1. Mix yeast and warm water. \n2. add 1.5 cups flour. \n3. Add oil and 1-1.5 cups more flour. \n4. knead until smooth and elastic. \n5. Let rise until doubled. \n6. Punch and shape into pizza crust or pretzels!', TRUE, 4);
@@ -151,13 +155,13 @@ Insert Into Note Values(5, 5, NULL);
 
 Insert Into Recipe Values (6, 'Chicken Marsala', '1. Place chicken breasts between 2 pieces of wax paper and pound into 1/4 inch thick wtih a meat mallet. Dust chicken with flour, salt, pepper and oregano. \n2. In a skillet, fry chicken in olive oil over medium heat. Cook until done, turning to cook evenly. Set aside and keep warm. \n3. In the same pan, melt the butter over medium heat; add mushrooms, sun-dried tomatoes, and Marsala wine. Cook for approximately 10 minutes, stirring occasionally. Mix in spinach and cook for about 2 minutes. Serve over chicken', FALSE, 4);
 Insert Into RI Values (46, 6, 15, 'NULL', 4);
-Insert Into RI Values (47, 6, 26, 'cup', 1/4 );
+Insert Into RI Values (47, 6, 26, 'cup', .25 );
 Insert Into RI Values (48, 6, 39, 'tbsp', 1);
 Insert Into RI Values (49, 6 , 35, 'tbsp', 2);
-Insert Into RI Values (50, 6, 22, 'cup', 3/4);
+Insert Into RI Values (50, 6, 22, 'cup', .75);
 Insert Into RI Values (51, 6, 42, 'cup', 3);
-Insert Into RI Values (52, 6, 43,'cup', 3/4 );
-Insert Into RI Values (53, 6, 44, 'cup', 1/2);
+Insert Into RI Values (52, 6, 43,'cup', .75 );
+Insert Into RI Values (53, 6, 44, 'cup', .5);
 Insert Into RI Values (54, 6, 45, 'cup', 1);
 Insert Into Note Values(6, 6, NULL);
 
@@ -168,7 +172,7 @@ Insert Into RI Values (56, 7, 32, NULL, 3);
 Insert Into RI Values (57, 7, 47, NULL, 1);
 Insert Into RI Values (58, 7, 38, 'tbsp', 1);
 Insert Into RI Values (59, 7, 48, 'tbsp', 1);
-Insert Into RI Values (60, 7, 35, 'cup', 1/4);
+Insert Into RI Values (60, 7, 35, 'cup', .25);
 Insert Into RI Values (61, 7, 46, 'tbsp', 2);
 Insert Into Note Values(7, 7, NULL);
 
@@ -183,15 +187,27 @@ Insert Into Note Values(8, 8, NULL);
 
 Insert Into Recipe Values (9, 'Blueberry Pie','1. Zest lemon and lime and set aside. Squeeze juice from lemon and lime. \n2. In a large mixing bowl, combine sugar and 3 tbsp  of flour. Stir in berries, lemon & lime zest, and half of the juice.\n2. Pour mixture into pie crust and seal with the remaining crust. \n3. If desired, brush pastry with a little milk and sprinkle additional sugar. To prevent over browning, cover pie with aluminium foil \n4. Bake in a 375 degree F oven for 25 minutes. Remove foil and bake for another 25-30 minutes more, or until top is golden. \n5. Cool on wire rack', FALSE, 11);
 Insert Into RI Values (76, 9, 53, 'cup', 5);
-Insert Into RI Values (75, 9, 57, 'cup', 2/3 );
-Insert Into RI Values (70, 9, 56, 'cup', 2/3);
+Insert Into RI Values (75, 9, 57, 'cup', .66 );
+Insert Into RI Values (70, 9, 56, 'cup', .66);
 Insert Into RI Values (71, 9, 26, 'tbsp', 3);
 Insert Into RI Values (72, 9, 58, NULL, 1);
 Insert Into RI Values (73, 9, 59, NULL, 1);
 Insert Into RI Values (74, 9, 60, NULL, 1);
 Insert Into Note Values(9, 9, NULL);
 
+Insert Into Recipe Values (10, 'Ginger-Molasses Cookies','1. Preheat oven to 325^F. \n2. Cream sugar and oil. \n3. Add eggs, then molasses \n4. Stir in cinnamon, ginger, baking soda, and salt. \n 5. Add flour gradually. \n6. Spoon onto parchment-lined cookie sheet and bake for 10 minutes or less, until puffy. Do not over-bake! \n7. Enjoy!', True, 24);
+Insert Into RI Values (77, 10, 56, 'cup', 2);
+Insert Into RI Values (78, 10, 64, 'cup', 1.5 );
+Insert Into RI Values (79, 10, 25, ' ', 2);
+Insert Into RI Values (80, 10, 63, 'tbsp', 1);
+Insert Into RI Values (81, 10, 62, 'tsp', 2);
+Insert Into RI Values (82, 10, 1, 'tsp', 1);
+Insert Into RI Values (83, 10, 23, 'tsp', 4);
+Insert Into RI Values (83, 10, 26, 'cup', 4);
+Insert Into Note Values(10, 10, NULL);
+
 
 Insert Into Dish Values (3, 4, 4, '2015-12-06 18:00:00');
 Insert Into Dish Values (4, 4, 3, '2015-12-02 12:00:00');
 Insert Into Dish Values (5, 5, 4, '2015-12-06 08:00:00');
+Insert Into Dish Values (6, 10, 24, '2015-12-15 09:00:00');
