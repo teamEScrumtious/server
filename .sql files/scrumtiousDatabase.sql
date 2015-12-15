@@ -253,12 +253,12 @@ Insert Into Dish Values (6, 10, 24, '2015-12-15 09:00:00');
 Insert Into Dish Values (7, 11, 72, '2015-12-15 09:15:00');
 Insert Into Dish Values (8, 12, 30, '2015-12-15 09:30:00');
 Insert Into Dish Values (9, 13, 30, '2015-12-15 09:45:00');
-Insert Into Dish Values (10, 5, 12, '2015-12-16 18:30:00');
-Insert Into Dish Values (10, 7, 12, '2015-12-17 18:40:00');
+Insert Into Dish Values (10, 5, 6, '2015-12-16 18:30:00');
+Insert Into Dish Values (10, 7, 8, '2015-12-17 18:40:00');
 Insert Into Dish Values (11, 6, 4, '2015-12-17 18:30:00');
 Insert Into Dish Values (12, 1, 4, '2015-12-18 18:30:00');
 Insert Into Dish Values (13, 3, 12, '2015-12-19 18:30:00');
-Insert Into Dish Values (14, 2, 12, '2015-12-20 11:00:00');
+Insert Into Dish Values (14, 2, 6, '2015-12-20 11:00:00');
 
 
 
