@@ -148,7 +148,7 @@ Insert Into RI Values (35, 4, 1, 'tsp', 1);
 Insert Into RI Values (36, 4, 27, 'tbsp', 3);
 Insert Into Note Values(4, 4, NULL);
 
-Insert Into Recipe Values (5, 'Pea Soup', '1. Add split green peas, spareribs, bacon and water and simmer for approximatle 1.5 hours. \n2. Add chopped leeks, celeriac, onion, carrots and potato and cook for another hour until the soup becomes thick. \n3. Take the meat out and remove bones. \n4. Puree the soup and add the meat back in', FALSE, 8);
+Insert Into Recipe Values (5, 'Pea Soup', '1. Add split green peas, spareribs, bacon and water and simmer for approximatle 1.5 hours. \n2. Add chopped leeks, celery, onion, carrots and potato and cook for another hour until the soup becomes thick. \n3. Take the meat out and remove bones. \n4. Puree the soup and add the meat back in', FALSE, 8);
 Insert Into RI Values (37, 5, 28, 'cup' , 3.5);
 Insert Into RI Values (38, 5, 33, 'lb', 1);
 Insert Into RI Values (39, 5, 36, 'lb', .5);
@@ -160,7 +160,7 @@ Insert Into RI Values (44, 5, 31, ' ', 1);
 Insert Into RI Values (45, 5, 32, ' ', 1);
 Insert Into Note Values(5, 5, NULL);
 
-Insert Into Recipe Values (6, 'Chicken Marsala', '1. Place chicken breasts between 2 pieces of wax paper and pound into 1/4 inch thick wtih a meat mallet. Dust chicken with flour, salt, pepper and oregano. \n2. In a skillet, fry chicken in olive oil over medium heat. Cook until done, turning to cook evenly. Set aside and keep warm. \n3. In the same pan, melt the butter over medium heat; add mushrooms, sun-dried tomatoes, and Marsala wine. Cook for approximately 10 minutes, stirring occasionally. Mix in spinach and cook for about 2 minutes. Serve over chicken', FALSE, 4);
+Insert Into Recipe Values (6, 'Chicken Marsala', '1. Place chicken breasts between 2 pieces of wax paper and pound into 1/4 inch thick with a meat mallet. Dust chicken with flour, salt, pepper and oregano. 2. In a skillet, fry chicken in olive oil over medium heat. Cook until done, turning to cook evenly. Set aside and keep warm. 3. In the same pan, melt the butter over medium heat; add mushrooms, sun-dried tomatoes, and Marsala wine. Cook for approximately 10 minutes, stirring occasionally. Mix in spinach and cook for about 2 minutes. Serve over chicken', FALSE, 4);
 Insert Into RI Values (46, 6, 15, ' ', 4);
 Insert Into RI Values (47, 6, 26, 'cup', .25);
 Insert Into RI Values (48, 6, 39, 'tbsp', 1);
