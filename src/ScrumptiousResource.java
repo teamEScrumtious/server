@@ -314,7 +314,8 @@ public class ScrumptiousResource {
                     "SELECT  Recipe.ID, Recipe.name, Recipe.servings, Recipe.prepInstructions, Note.content,"
                             +" Recipe.bookmarked, Ingredient.ID, Ingredient.name, Ingredient.type, RI.ID, RI.unit, RI.quantity \n"+
                             "FROM Recipe, Dish, Ingredient, RI, Note\n" +
-                            "WHERE Note.recipeID = Recipe.ID AND RI.recipeID = Recipe.ID AND Dish.recipeID = Recipe.ID AND Ingredient.ID = RI.ingredientID"
+                            "WHERE Note.recipeID = Recipe.ID AND RI.recipeID = Recipe.ID AND Dish.recipeID = Recipe.ID AND Ingredient.ID = RI.ingredientID\n" +
+                            "ORDER BY Recipe.name ASC"
             );
             while (resultSet.next()) {
                 int RecipeID = resultSet.getInt(1);
@@ -458,14 +459,15 @@ public class ScrumptiousResource {
      * @return status message
      */
     @POST
-    @Path("/recipes/weekplan")
+    @Path("/recipes/addDish")
     @Consumes("text/plain")
     @Produces("text/plain")
     public String postDish(String DishLine) {
         String result;
         StringTokenizer st = new StringTokenizer(DishLine);
         int id = -1;
-        String recipeID = st.nextToken(), servings = st.nextToken(), date = st.nextToken();
+        String recipeID = st.nextToken(), servings = st.nextToken(), date1 = st.nextToken(), date2 = st.nextToken();
+        String date = date1 + " " + date2;
         try {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(DB_URI, DB_LOGIN_ID, DB_PASSWORD);
