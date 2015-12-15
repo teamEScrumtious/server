@@ -57,7 +57,7 @@ Grant Select On Dish To Public;
 
 -- Inserts Data
 Insert Into Ingredient Values (1, 'Salt', 'Spice');
-Insert Into Ingredient Values (15, 'Chicken breast', 'Meat');
+Insert Into Ingredient Values (15, 'Chicken Breast', 'Meat');
 Insert Into Ingredient Values (16, 'Ground Beef', 'Meat');
 Insert Into Ingredient Values (17, 'Taco Seasoning', 'Spice');
 Insert Into Ingredient Values (18, 'Lettuce', 'Produce');
@@ -72,33 +72,33 @@ Insert Into Ingredient Values (26, 'Flour', 'Baking');
 Insert Into Ingredient Values (27, 'Water', 'Baking');
 Insert Into Ingredient Values (28, 'Butternut Squash', 'Produce');
 Insert Into Ingredient Values (29, 'Leeks', 'Produce');
-Insert Into Ingredient Values (30, 'Yellow onion', 'Produce');
+Insert Into Ingredient Values (30, 'Yellow Onion', 'Produce');
 Insert Into Ingredient Values (31, 'Carrots', 'Produce');
 Insert Into Ingredient Values (32, 'Potatoes', 'Produce');
-Insert Into Ingredient Values (33, 'Spare ribs', 'Meat');
+Insert Into Ingredient Values (33, 'Spare Ribs', 'Meat');
 Insert Into Ingredient Values (34, 'Yeast', 'Baking');
 Insert Into Ingredient Values (35, 'Olive Oil', 'Baking');
 Insert Into Ingredient Values (36, 'Bacon', 'Meat');
 Insert Into Ingredient Values (37, 'Split Green Peas', 'Produce');
 Insert Into Ingredient Values (38, 'Thyme', 'Spice' );
 Insert Into Ingredient Values (39, 'Oregano', 'Spice');
-Insert Into Ingredient Values (40, 'Red bell pepper', 'Produce');
+Insert Into Ingredient Values (40, 'Red Bell Pepper', 'Produce');
 Insert Into Ingredient Values (41, 'Sweet Potato', 'Produce');
-Insert Into Ingredient Values (42, 'Portobello mushrooms', 'Produce');
-Insert Into Ingredient Values (43, 'Sun-dried tomatoes', 'Produce');
+Insert Into Ingredient Values (42, 'Portobello Mushrooms', 'Produce');
+Insert Into Ingredient Values (43, 'Sun-dried Tomatoes', 'Produce');
 Insert Into Ingredient Values (44, 'Spinach', 'Produce');
 Insert Into Ingredient Values (45, 'Marsala Wine', 'Alcohol');
 Insert Into Ingredient Values (46, 'Balsamic Vinegar', 'Baking');
-Insert Into Ingredient Values (47, 'Red onion', 'Produce');
+Insert Into Ingredient Values (47, 'Red Onion', 'Produce');
 Insert Into Ingredient Values (48, 'Rosemary', 'Spice' );
-Insert Into Ingredient Values (49, 'Lean ground beef', 'Meat');
-Insert Into Ingredient Values (50, 'Dry enchilada sauce mix', 'Spice');
+Insert Into Ingredient Values (49, 'Lean Ground Beef', 'Meat');
+Insert Into Ingredient Values (50, 'Dry Enchilada Sauce Mix', 'Spice');
 Insert Into Ingredient Values (51, 'Cheddar Cheese', 'Dairy');
-Insert Into Ingredient Values (52, 'Black olives', 'Produce');
+Insert Into Ingredient Values (52, 'Black Olives', 'Produce');
 Insert Into Ingredient Values (53, 'Blueberries', 'Produce');
-Insert Into Ingredient Values (54, 'Black olives', 'Produce');
-Insert Into Ingredient Values (55, 'Brown sugar', 'Baking');
-Insert Into Ingredient Values (56, 'White sugar', 'Baking');
+Insert Into Ingredient Values (54, 'Black Olives', 'Produce');
+Insert Into Ingredient Values (55, 'Brown Sugar', 'Baking');
+Insert Into Ingredient Values (56, 'White Sugar', 'Baking');
 Insert Into Ingredient Values (57, 'Shortening', 'Baking');
 Insert Into Ingredient Values (58, 'Lime', 'Produce');
 Insert Into Ingredient Values (59, 'Lemon', 'Produce');
@@ -108,9 +108,12 @@ Insert Into Ingredient Values (62, 'Molasses', 'Baking');
 Insert Into Ingredient Values (63, 'Ginger', 'Spice');
 Insert Into Ingredient Values (64, 'Canola Oil', 'Baking');
 Insert Into Ingredient Values (65, 'Vanilla Pudding Mix', 'Miscellaneous');
-Insert Into Ingredient Values (66, 'Vanilla extract', 'Baking');
-Insert Into Ingredient Values (67, 'Semi-sweek chocolate chips', 'Baking');
+Insert Into Ingredient Values (66, 'Vanilla Extract', 'Spice');
+Insert Into Ingredient Values (67, 'Semi-Sweet Chocolate Chips', 'Baking');
 Insert Into Ingredient Values (68, 'Chopped Walnuts', 'Baking');
+Insert Into Ingredient Values (69, 'Almond Extract', 'Spice');
+Insert Into Ingredient Values (70, 'Powdered Sugar', 'Baking');
+Insert Into Ingredient Values (71, 'Cream of Tartar', 'Spice');
 
 
 Insert Into Recipe Values (1, 'Nathans Tacos', '1. Brown the Beef. \n2. Pour a the water and the taco seasoning into the pan with the beef and cook until water mostly boils off. \n3. Warm other ingredients to desired temperature. \n4. Mix as desired. \n5. Enjoy.', TRUE, 5);
@@ -210,7 +213,7 @@ Insert Into RI Values (83, 10, 23, 'tsp', 4);
 Insert Into RI Values (84, 10, 26, 'cup', 4);
 Insert Into Note Values(10, 10, NULL);
 
-Insert Into Recipe Values (11, 'Award Winning Soft Chocolate Chip Cookies', '1.Preheat oven to 350 degrees F (175 degrees C). \n2. Sift together the flour and baking soda, set aside. \n3. In a large bowl, cream together the butter, brown sugar, and white sugar. \n4. Beat in the instant pudding mix until blended. \n5.Stir in the eggs and vanilla. \n6. Blend in the flour mixture. \n7. Finally, stir in the chocolate chips and nuts. \n8. Drop cookies by rounded spoonfuls onto ungreased cookie sheets. \n9.Bake for 10 to 12 minutes in the preheated oven. Edges should be golden brown.', TRUE, 72);
+Insert Into Recipe Values (11, 'Tammies Chocolate Chip Cookies', '1.Preheat oven to 350 degrees F (175 degrees C). \n2. Sift together the flour and baking soda, set aside. \n3. In a large bowl, cream together the butter, brown sugar, and white sugar. \n4. Beat in the instant pudding mix until blended. \n5.Stir in the eggs and vanilla. \n6. Blend in the flour mixture. \n7. Finally, stir in the chocolate chips and nuts. \n8. Drop cookies by rounded spoonfuls onto ungreased cookie sheets. \n9.Bake for 10 to 12 minutes in the preheated oven. Edges should be golden brown.', TRUE, 72);
 Insert Into RI Values (85, 11, 26, 'cup', 4.5);
 Insert Into RI Values (86, 11, 23, 'tsp', 2);
 Insert Into RI Values (87, 11, 22, 'cup', 2);
@@ -219,12 +222,34 @@ Insert Into RI Values (89, 11, 26, 'cup', .5);
 Insert Into RI Values (90, 11, 65, 'oz', 6.8);
 Insert Into RI Values (91, 11, 25, ' ', 4);
 Insert Into RI Values (92, 11, 66, 'tsp', 2);
-Insert Into RI Values (85, 11, 67, 'cup', 4);
-Insert Into RI Values (85, 11, 68, 'cup', 2);
+Insert Into RI Values (93, 11, 67, 'cup', 4);
+Insert Into RI Values (94, 11, 68, 'cup', 2);
+Insert Into Note Values (11, 11, NULL);
+
+Insert Into Recipe Values (12, 'Lias Christmas Cookies', '1. Preheat oven to 375 ^F \n2. In a bowl, cream butter and sugar. Add egg and extracts. \n3. Combine flour, baking soda and cream of tartar; gradually add to the creamed mixture and mix well. \n4. Chill for 2-3 hours.\n5. On a lightly floured surface, roll dough to 1/8-in. thickness. Cut into desired shapes. Place on ungreased baking sheets. \n6.Bake at 375° for 7-8 minutes or until edges begin to brown. \n7.Cool on a wire rack.', TRUE, 30);
+Insert Into RI Values (95, 12, 22, 'cup', 1);
+Insert Into RI Values (96, 12, 70, 'cup', 1.5);
+Insert Into RI Values (97, 12, 25, ' ', 1);
+Insert Into RI Values (98, 12, 66, 'tsp', 1);
+Insert Into RI Values (99, 12, 69, 'tsp', .5);
+Insert Into RI Values (100, 12, 26, 'cup', 2.5);
+Insert Into RI Values (101, 12, 23, 'tsp', 1);
+Insert Into RI Values (102, 12, 71, 'tsp', 1);
+Insert Into Note Values (12, 12, NULL);
+
+
+Insert Into Recipe Values (13, 'Lias Buttercream Frosting', '1. Beat sugar and butter in a bowl. \n2. Add vanilla and almond', TRUE, 48);
+Insert Into RI Values (103, 13, 22, 'cup', 1);
+Insert Into RI Values (104, 13, 70, 'cup', 2);
+Insert Into RI Values (105, 13, 66, 'tsp', .5);
+Insert Into RI Values (106, 13, 69, 'tsp', .25);
+Insert Into Note Values (13, 13, NULL);
 
 
 Insert Into Dish Values (3, 4, 4, '2015-12-06 18:00:00');
 Insert Into Dish Values (4, 4, 3, '2015-12-02 12:00:00');
 Insert Into Dish Values (5, 5, 4, '2015-12-16 08:00:00');
 Insert Into Dish Values (6, 10, 24, '2015-12-15 09:00:00');
-Insert Into Dish Values (7, 11, 
+Insert Into Dish Values (7, 11, 72, '2015-12-15 09:15:00');
+Insert Into Dish Values (8, 12, 30, '2015-12-15 09:30:00');
+Insert Into Dish Values (9, 13, 30, '2015-12-15 09:45:00');
